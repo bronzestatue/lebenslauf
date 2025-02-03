@@ -148,7 +148,6 @@ const publications = [
   // Add all other publications here...
 ];
 
-// Function to create experience elements
 function createExperienceElement(experience) {
     const div = document.createElement('div');
     div.className = 'experience-item';
@@ -167,20 +166,21 @@ function createExperienceElement(experience) {
     return div;
 }
 
+
 // Function to create certification elements
-function createCertificationElement(certification) {
+function createCertificationElement(certifications) {
     const div = document.createElement('div');
     div.className = 'certification-item';
 
     div.innerHTML = `
     <div class="group relative flex justify-between items-start">
       <div>
-        <a href="${certification.url}" class="publication-title">
-          <h3>${certification.title}</h3>
+        <a href="${certifications.url}" class="publication-title">
+          <h3>${certifications.title}</h3>
         </a>
-        <p class="date">${certification.issuer}, ${certification.year}</p>
+        <p class="date">${certifications.issuer}, ${certifications.year}</p>
       </div>
-      <a href="${certification.url}" class="external-link" aria-label="External link to certification">
+      <a href="${certifications.url}" class="external-link" aria-label="External link to certification">
         <i data-lucide="external-link"></i>
       </a>
     </div>
@@ -301,6 +301,8 @@ function initFloatingNav() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+  loadExperiences();
+  loadCertifications();
   loadPublications();
   initFloatingNav();
 });

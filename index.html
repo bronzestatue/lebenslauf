@@ -1,15 +1,80 @@
+<!DOCTYPE html>
 <html lang="de">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Constantin Sinowski</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-  <body>
-      <div class="experience-items"></div>
-      <div class="certification-items"></div>
-      <div class="publication-items"></div>
-      <script src="main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constantin Sinowski</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="header">
+                    <h1>Constantin Sinowski</h1>
+                    <p class="subtitle">KI Spezialist</p>
+                </div>
+                <div class="sections">
+                    <div>
+                        <h2>Kontakt</h2>
+                        <div class="contact-links">
+                            <a href="mailto:constantin@sinowski.de" class="contact-item">
+                                <i data-lucide="mail"></i>
+                                <span>constantin@sinowski.de</span>
+                            </a>
+                            <a href="tel:+4915679001672" class="contact-item">
+                                <i data-lucide="phone"></i>
+                                <span>+49 156 79001672</span>
+                            </a>
+                            <div class="contact-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Berlin, Deutschland</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Soziale Medien</h2>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/constantinsinowski/" class="social-link">
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/constantinsinowski/" class="social-link">
+                                <i data-lucide="instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Gehaltsvorstellung</h2>
+                        <p class="salary">50.000€ - 60.000€</p>
+                        <p class="salary-note">Verhandelbar</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Experience Items -->
+                <section id="experiences">
+                    <div class="experience-items"></div>
+                </section>
+
+                <!-- Certification Items -->
+                <section id="certifications">
+                    <div class="certification-items"></div>
+                </section>
+
+                <!-- Publication Items -->
+                <section id="publications">
+                    <div class="publication-items"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
 </html>
+
