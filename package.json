@@ -1,0 +1,27 @@
+{
+  "name": "lebenslauf",
+  "version": "0.1.1",
+  "description": "updated structured data",
+  "main": "main.js",
+  "devDependencies": {
+    "eslint": "^9.19.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bronzestatue/lebenslauf.git"
+  },
+  "keywords": [
+    "webspace",
+    "test"
+  ],
+  "author": "CS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bronzestatue/lebenslauf/issues"
+  },
+  "homepage": "https://github.com/bronzestatue/lebenslauf#readme"
+}
