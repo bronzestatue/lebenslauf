@@ -26,6 +26,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0.5rem;
     overflow: hidden;
+    padding-left: 1rem;
 }
 
 .calendly-inline-widget {
@@ -69,6 +70,7 @@ body {
     color: white;
     width: 320px;
     padding: 2rem;
+    margin-right: 2rem;
 }
 
 .sidebar-content {
@@ -110,6 +112,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    padding-left: 1rem;
 }
 
 .contact-item {
@@ -129,6 +132,7 @@ body {
 .social-links {
     display: flex;
     gap: 1rem;
+    padding-left: 1rem;
 }
 
     .social-links a {
@@ -143,6 +147,7 @@ body {
 /* Salary section */
 .salary {
     color: #d1d5db;
+    padding-left: 1rem;
 }
 
 .salary-note {
