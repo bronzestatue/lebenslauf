@@ -30,8 +30,8 @@ body {
 }
 
 .calendly-inline-widget {
-    min-width: 360px;
-    height: 300px;
+    min-width: 450px;
+    height: 600px;
     background: transparent;
     padding-left: 1rem;
 }
