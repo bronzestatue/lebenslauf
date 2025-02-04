@@ -1,38 +1,5 @@
 /* Base styles */
 :root {
-  --primary-bg: #ffffff;
-  --sidebar-bg: #111827;
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-light: #9ca3af;
-  --accent: #3b82f6;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.5;
-  color: var(--text-primary);
-}
-
-/* Layout */
-.container {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* Sidebar */
-.sidebar {
-    background-color: var(--sidebar-bg);
-    color: white; /* Base styles */
-    : root
-
-{
     --primary-bg: #ffffff;
     --sidebar-bg: #111827;
     --text-primary: #111827;
@@ -48,10 +15,47 @@ body {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Calibri", Arial, sans-serif;
     line-height: 1.5;
     color: var(--text-primary);
 }
+
+/* Calendly Container */
+.calendly-container {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.calendly-inline-widget {
+    min-width: 280px;
+    height: 600px;
+    background: transparent;
+}
+
+/* Update sidebar content for better scrolling with Calendly */
+.sidebar-content {
+    position: sticky;
+    top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+    .sidebar-content::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar-content::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sidebar-content::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+    }
 
 /* Layout */
 .container {
@@ -89,6 +93,7 @@ body {
 
 .sections > div {
     margin-bottom: 1.5rem;
+    padding-left: 1rem;
 }
 
 .sections h2 {
@@ -97,6 +102,7 @@ body {
     letter-spacing: 0.05em;
     color: var(--text-light);
     margin-bottom: 0.75rem;
+    padding-left: 1rem;
 }
 
 /* Contact section */
@@ -188,6 +194,7 @@ section {
     .experience-header h3 {
         font-size: 1.25rem;
         font-weight: 500;
+        margin-bottom: 1rem; /* Add extra space after h3 headings */
     }
 
 .company {
@@ -222,7 +229,7 @@ section {
 }
 
     .publication-title:hover {
-        color: var(--accent);
+        color: blue; /* Change color to blue on hover */
     }
 
     .publication-title h3 {
@@ -242,6 +249,34 @@ section {
 .publication-item:hover .external-link {
     opacity: 1;
 }
+
+/* Certifications */
+.certification-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.certification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.certification-title {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+    .certification-title:hover {
+        color: blue; /* Change color to blue on hover */
+    }
+
+    .certification-title h3 {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
 
 /* Floating Navigation */
 .floating-nav {

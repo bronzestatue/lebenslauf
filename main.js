@@ -37,7 +37,7 @@ const experiences = [
         title: "EDV-Programmierer",
         company: "Motion Fashion Network Europe GmbH",
         period: "03.2018 - 06.2018",
-        description: "Ein wesentlicher Teil meiner Arbeit war die Datenbankmigration und -analyse von Archiven mithilfe von Bash, Perl und Java. Ich entwickelte Skripte zur Automatisierung von Datenmigrationen, um den Transfer großer Datenmengen zwischen verschiedenen Systemen effizient und fehlerfrei zu gestalten. Außerdem analysierte ich die migrierten Daten, um sicherzustellen, dass sie korrekt und vollständig übertragen wurden. Ich war an der Entwicklung eines Programms in Java beteiligt, das nach den Prinzipien von Scrum und unter Verwendung von Git als Versionskontrollsystem entwickelt wurde. In diesem Projekt arbeitete ich eng mit dem Entwicklungsteam zusammen, um Anforderungen zu spezifizieren, Features zu implementieren und regelmäßig Fortschritte zu präsentieren. Die Arbeit in einem agilen Umfeld ermöglichte es mir, flexibel auf Änderungen zu reagieren und kontinuierlich Verbesserungen einzubringen. Zusätzlich erstellte ich Konzepte im Projektmanagement für interne Dokumente. Eine zentrale Aufgabe war die Entwicklung eines Verfahrens, das es ermöglichte, Datenabgleiche in mehreren Microsoft Word-Dokumenten durchzuführen. Hierbei wurden Platzhalter für Textfelder mit den Namen der Projektverantwortlichen durch eine zentrale Microsoft Excel-Tabelle gefüllt. Dieses System verbesserte die Konsistenz und Aktualität der Dokumentation und vereinfachte die Verwaltung von Projektdokumenten erheblich. Ein bedeutender Teil meiner Tätigkeit umfasste die Recherche und Dokumentation zu modernen Technologien im Bereich Cloud Computing und Containerisierung. Ich untersuchte Cloud-Dienste wie AWS und d.velop sowie Container-Technologien wie Docker und Kubernetes. Meine Recherche konzentrierte sich darauf, wie eine Virtual Private Cloud (VPC) mit VPN, SSL, Firewall und Lambda-Funktionen eingerichtet und verwaltet werden kann. Die Ergebnisse meiner Recherche wurden in detaillierten Dokumentationen festgehalten, die als Leitfaden für zukünftige Implementierungen dienten."
+        description: "Ein zentraler Teil meiner Arbeit war der Export von Daten aus dem systeminternen proMO-System in das SAP XML-Format. Dieser Prozess umfasste mehrere Schritte, darunter die Extraktion relevanter Daten aus proMO, die Transformation dieser Daten in das XML-Format und die anschließende Integration in das SAP-System. Durch diese Arbeit konnte ich sicherstellen, dass die Daten nahtlos zwischen den Systemen übertragen wurden, was die Effizienz der Datenverarbeitung und -analyse erheblich steigerte. Ein weiteres bedeutendes Projekt war die Integration von Google Maps in die Präsentationsseite der Firma.Ziel war es, eine interaktive Karte mit Standortkennungen und Marktübersichten zu erstellen, die den Nutzern eine einfache und visuell ansprechende Möglichkeit bot, Informationen über die verschiedenen Standorte und Märkte des Unternehmens zu erhalten.Ich war für die Implementierung der Google Maps API verantwortlich, die es ermöglichte, Standorte dynamisch zu kennzeichnen und zusätzliche Informationen anzuzeigen.Diese Integration erleichterte den Nutzern den Zugriff auf wichtige Standortdaten und verbesserte die Benutzerfreundlichkeit der Präsentationsseite erheblich. Im Bereich des Produktinformationsmanagements(PIM) war ich für die Verwaltung und Optimierung der Produktdaten verantwortlich.Dies umfasste die Erfassung, Speicherung und Pflege von Produktinformationen, um sicherzustellen, dass alle Daten aktuell und genau waren.Ich entwickelte und implementierte Prozesse zur Konsolidierung und Standardisierung der Produktinformationen, die es dem Unternehmen ermöglichten, konsistente und verlässliche Daten für Marketing, Vertrieb und Kundensupport bereitzustellen.Durch die Einführung automatisierter Workflows und Validierungsregeln konnte ich die Effizienz des Produktinformationsmanagements weiter verbessern und die Fehlerquote bei der Datenerfassung reduzieren."
     }
 ];
 
@@ -48,6 +48,18 @@ const certifications = [
         issuer: "Codecademy",
         year: "2024",
         url: "https://www.codecademy.com/profiles/_cosinus/certificates/5cafb2d937090210d7df3652"
+    },
+    {
+        title: "Bash Scripting",
+        issuer: "Codecademy",
+        year: "2024",
+        url: "https://www.codecademy.com/profiles/_cosinus/certificates/37c55263a9f1b1f7603f7551c293ecbd"
+    },
+    {
+        title: "BI Dashboards with Power BI",
+        issuer: "Codecademy",
+        year: "2023",
+        url: "https://www.codecademy.com/profiles/constantinsinowski/certificates/1cb76ac48943853ca32c394afeb491c9"
     }
 ];
 
@@ -143,7 +155,7 @@ const publications = [
         year: "2020",
         url: "https://www.grin.com/document/1336653",
         description: "Anhand des Segments im Markt für Personenverkehr wird aufgezeigt, wie das Unternehmen FlixBus sich im Markt fur Fernbusreisen etabliert hat. Dies wird dadurch gestützt, dass die Geschichte des Personenbeforderungsgesetz aufgeführt wird und wie verschiedene Unternehmen, welche später von FlixBus akquiriert wurden, diesen Markt ausgebaut und bedient haben. Weiter wird auch darauf ein- gegangen, wie sich FlixBus durch Markenbekanntheit und Qualität bei der Buchung und der Fahrt als Marktführer durchgesetzt hat und welche Preiselastizität in der Nachfrage fur Fahrscheine vorherrscht und wie diese die Erlöse beeinflusst. Zum Schluss wird diskutiert, wie die Bundesregierung von Deutschland bei einer Monopolbildung reagiert und wie sich diese Situation auf europäischer Ebene verhält."
-    },
+    }
 
   // Add all other publications here...
 ];
@@ -305,4 +317,5 @@ document.addEventListener('DOMContentLoaded', () => {
   loadCertifications();
   loadPublications();
   initFloatingNav();
+  lucide.createIcons();
 });
