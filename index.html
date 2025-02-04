@@ -6,8 +6,20 @@
     <title>Constantin Sinowski</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
+
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">
+        <ul>
+            <li><a href="#focus">Fokus</a></li>
+            <li><a href="#experiences">Erfahrung</a></li>
+            <li><a href="#certifications">Zertifizierungen</a></li>
+            <li><a href="#publications">Veröffentlichungen</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
@@ -50,6 +62,14 @@
                         <p class="salary">50.000€ - 60.000€</p>
                         <p class="salary-note">Verhandelbar</p>
                     </div>
+
+                    <div>
+                        <h2>Terminbuchung</h2>
+                        <div class="calendly-container">
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/constantinsinowski/telefonat"></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </aside>
@@ -57,19 +77,34 @@
         <!-- Main Content -->
         <main class="main-content">
             <div class="content-wrapper">
+
+                <!-- Current -->
+                <section id="focus">
+                    <div class="section-header">
+                        <h2>Fokus</h2>
+                    </div>
+                    <p>Weiterbildung KI Masterclass Basic</p>
+                </section>
+
                 <!-- Experience Items -->
                 <section id="experiences">
-                    <div class="experience-items"></div>
+                    <div class="experience-items">
+                        <h2>Professionelle Erfahrung</h2>
+                    </div>
                 </section>
 
                 <!-- Certification Items -->
                 <section id="certifications">
-                    <div class="certification-items"></div>
+                    <div class="certification-items">
+                        <h2>Zertifizierungen</h2>
+                    </div>
                 </section>
 
                 <!-- Publication Items -->
                 <section id="publications">
-                    <div class="publication-items"></div>
+                    <div class="publication-items">
+                        <h2>Veröffentlichungen</h2>
+                    </div>
                 </section>
             </div>
         </main>
