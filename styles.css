@@ -31,7 +31,7 @@ body {
 
 .calendly-inline-widget {
     min-width: 280px;
-    height: 600px;
+    height: 300px;
     background: transparent;
 }
 
@@ -80,6 +80,7 @@ body {
 
 .header {
     margin-bottom: 3rem;
+    padding-left: 1rem;
 }
 
     .header h1 {
@@ -91,6 +92,7 @@ body {
 .subtitle {
     color: var(--text-light);
     font-size: 1.125rem;
+    padding-left: 1rem;
 }
 
 .sections > div {
@@ -154,6 +156,7 @@ body {
     color: var(--text-light);
     font-size: 0.875rem;
     margin-top: 0.25rem;
+    padding-left: 1rem;
 }
 
 /* Main content */
