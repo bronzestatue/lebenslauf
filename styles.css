@@ -31,7 +31,7 @@ body {
 
 .calendly-inline-widget {
     min-width: 450px;
-    height: 600px;
+    height: 1000px;
     background: transparent;
     padding-left: 1rem;
 }
@@ -207,14 +207,26 @@ section {
         margin-bottom: 1rem; /* Add extra space after h3 headings */
     }
 
-.company {
+.company a {
     color: var(--text-secondary);
+    text-decoration: none;
 }
+
+    .company a:hover {
+        text-decoration: underline;
+    }
 
 .date {
     color: var(--text-secondary);
 }
 
+.details {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.employment-type,
+.location,
 .description {
     color: var(--text-secondary);
 }
