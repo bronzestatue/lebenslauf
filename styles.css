@@ -184,6 +184,11 @@ section {
     margin-bottom: 1.5rem;
 }
 
+    .section-header i {
+        font-size: 1.5rem;
+        color: var(--text-primary);
+    }
+
     .section-header h2 {
         font-size: 1.5rem;
         font-weight: 600;
@@ -204,7 +209,7 @@ section {
     .experience-header h3 {
         font-size: 1.25rem;
         font-weight: 500;
-        margin-bottom: 1rem; /* Add extra space after h3 headings */
+        margin-bottom: 0; /* Add extra space after h3 headings */
     }
 
 .company a {
