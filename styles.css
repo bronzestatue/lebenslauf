@@ -392,11 +392,11 @@ section {
         margin-left: 0.5rem; /* Small margin to the left */
         margin-right: 0.5rem; /* Small margin to the right */
         width: calc(100% - 1rem); /* Adjust width to fit the screen */
-        height: 1200px; /* Adjust height for mobile devices as needed */
+        height: 400px; /* Adjust height for mobile devices as needed */
     }
 
     .calendly-inline-widget {
         min-width: 100%; /* Ensure the widget takes full width */
-        height: auto; /* Adjust height as needed */
+        height: 300px; /* Adjust height as needed */
     }
 }
