@@ -388,10 +388,11 @@ section {
         display: none; /* Hide navigation bar on mobile devices */
     }
 
-        .calendly-container {
+    .calendly-container {
         margin-left: 0.5rem; /* Small margin to the left */
         margin-right: 0.5rem; /* Small margin to the right */
         width: calc(100% - 1rem); /* Adjust width to fit the screen */
+        height: 1200px; /* Adjust height for mobile devices as needed */
     }
 
     .calendly-inline-widget {
