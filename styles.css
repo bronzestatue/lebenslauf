@@ -192,6 +192,7 @@ section {
     .section-header h2 {
         font-size: 1.5rem;
         font-weight: 600;
+        margin: 0;
     }
 
 /* Experience items */
@@ -307,6 +308,7 @@ section {
 
 /* Floating Navigation */
 .floating-nav {
+    display: block;
     position: fixed;
     top: 2rem;
     right: 2rem;
@@ -378,5 +380,20 @@ section {
         opacity: 1;
         position: static;
         margin-left: 0.5rem;
+    }
+
+    .floating-nav {
+        display: none; /* Hide navigation bar on mobile devices */
+    }
+
+        .calendly-container {
+        margin-left: 0.5rem; /* Small margin to the left */
+        margin-right: 0.5rem; /* Small margin to the right */
+        width: calc(100% - 1rem); /* Adjust width to fit the screen */
+    }
+
+    .calendly-inline-widget {
+        min-width: 100%; /* Ensure the widget takes full width */
+        height: auto; /* Adjust height as needed */
     }
 }
