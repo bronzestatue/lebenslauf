@@ -22,12 +22,6 @@ body {
     color: var(--text-primary);
 }
 
-/* Section Terminbuchung */
-#terminbuchung {
-    margin-top: 1rem;
-    padding: 1rem;
-}
-
 /* Calendly Container */
 .calendly-container {
     display: flex;
@@ -58,12 +52,12 @@ body {
     .calendly-inline-widget {
         position: absolute;
         left: 0;
-        margin-left: 50px;
+        margin-left: 25px;
         min-width: 450px;
         width: 100%;
         height: 1000px;
         background: transparent;
-        padding-left: 1rem;
+        padding-left: 0;
     }
 
 /* Update sidebar content for better scrolling with Calendly */
