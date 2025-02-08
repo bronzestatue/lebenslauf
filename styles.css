@@ -23,7 +23,6 @@ body {
 
 /* Calendly Container */
 .calendly-container {
-    position: fixed;
     margin-top: 1rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0.5rem;
@@ -31,7 +30,6 @@ body {
     overflow: hidden;
     text-align: center;
     padding: 1rem;
-    margin-left: auto;
     padding-left: 150rem;
     padding-right: 30rem;
     transition: margin-left 0.3s ease; /* Übergang für die Margins */
@@ -44,7 +42,7 @@ body {
     }
 
 .sidebar.collapsed ~ .calendly-container {
-    margin-left: auto; /* Platz für die eingeklappte Sidebar */
+    margin-left: 50px; /* Platz für die eingeklappte Sidebar */
 }
 
     .calendly-inline-widget {
@@ -126,6 +124,17 @@ body {
 
 .sidebar.collapsed .sidebar-content {
     opacity: 0.3; /* Geringere Sichtbarkeit, wenn eingeklappt */
+}
+
+/* Hauptinhalt mit Flexbox */
+.main-content {
+    display: flex;
+    margin-left: 250px; /* Platz für die ausgeklappte Sidebar */
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .main-content {
+    margin-left: 50px; /* Platz für die eingeklappte Sidebar */
 }
 
 
