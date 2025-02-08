@@ -2,6 +2,7 @@
 :root {
     --primary-bg: #ffffff;
     --sidebar-bg: #111827;
+    --sidebar-width: 350px;
     --text-primary: #111827;
     --text-secondary: #4b5563;
     --text-light: #9ca3af;
@@ -21,32 +22,39 @@ body {
     color: var(--text-primary);
 }
 
+/* Section Terminbuchung */
+#terminbuchung {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
 /* Calendly Container */
 .calendly-container {
     margin-top: 1rem;
+    margin-left: var(--sidebar-width);
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0.5rem;
     max-width: auto;
     overflow: hidden;
     text-align: center;
     padding: 1rem;
-    padding-left: 150rem;
-    padding-right: 30rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     transition: margin-left 0.3s ease; /* Übergang für die Margins */
 }
 
     .calendly-container:hover {
         background: rgba(255, 255, 255, 0.2);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        padding-right: 60rem;
     }
 
 .sidebar.collapsed ~ .calendly-container {
-    margin-left: 50px; /* Platz für die eingeklappte Sidebar */
+    margin-left: var(--sidebar-width); /* Platz für die eingeklappte Sidebar */
 }
 
     .calendly-inline-widget {
         min-width: 450px;
+        width: 100%;
         height: 1000px;
         background: transparent;
         padding-left: 1rem;
@@ -84,59 +92,62 @@ body {
     min-height: 100vh;
 }
 
-/* Sidebar */
+/* Standardstil der Sidebar */
 .sidebar {
     position: fixed;
     left: 0;
     top: 0;
-    width: 250px;
+    width: var(--sidebar-width);
     height: 100%;
     background-color: var(--sidebar-bg);
     color: white;
-    width: 320px;
     padding: 2rem;
-    margin-right: 2rem;
-    transition: left 0.3s ease; /* Animation für das Einklappen */
+    transition: left 0.3s ease;
 }
 
-    /* Eingeklappte Sidebar */
-    .sidebar.collapsed {
-        left: -200px; /* Eingeklappte Position */
-    }
+/* Eingeklappte Sidebar */
+.sidebar.collapsed {
+    left: -150px;
+}
 
-        /* Stil, wenn die Sidebar leicht sichtbar ist */
-        .sidebar.collapsed::after {
-            content: '';
-            position: absolute;
-            right: -50px;
-            top: 0;
-            width: 50px;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.1); /* Halbtransparenter Bereich zum Hovern */
-            cursor: pointer;
-        }
+/* Stil, wenn die Sidebar leicht sichtbar ist */
+.sidebar.collapsed::after {
+    content: '';
+    position: absolute;
+    right: -50px;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
 
-/* Stil der Sidebar-Inhalte */
+/* Sidebar-Inhalte */
 .sidebar-content {
     opacity: 1;
     transition: opacity 0.3s ease;
 }
 
 .sidebar.collapsed .sidebar-content {
-    opacity: 0.3; /* Geringere Sichtbarkeit, wenn eingeklappt */
+    opacity: 0.3;
 }
 
-/* Hauptinhalt mit Flexbox */
-.main-content {
-    display: flex;
-    margin-left: 250px; /* Platz für die ausgeklappte Sidebar */
-    transition: margin-left 0.3s ease;
+/* Button zum Erweitern der Sidebar */
+.toggle-button {
+    display: none;
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
 }
 
-.sidebar.collapsed ~ .main-content {
-    margin-left: 50px; /* Platz für die eingeklappte Sidebar */
+.sidebar.collapsed .toggle-button {
+    display: block;
 }
-
 
 .header {
     margin-bottom: 3rem;
@@ -153,7 +164,6 @@ body {
 .subtitle {
     color: var(--text-light);
     font-size: 1.125rem;
-    padding-left: 1rem;
     pointer-events: none;
     text-decoration: none;
 }
@@ -167,7 +177,7 @@ body {
 
 /* Section styles */
 section {
-    margin-left: 250px;
+    margin-left: var(--sidebar-width);
     margin-bottom: 4rem;
     padding-right: 5vw; /* Add padding to the right for better readability */
     transition: margin-left 0.3s ease; /* Animation für das Einklappen */
@@ -242,9 +252,12 @@ section {
 
 /* Main content */
 .main-content {
-    flex: 1;
-    padding: 2rem 3rem;
+    margin-left: calc(var(--sidebar-width) + 100);
+    ar(--sidebar-width);
+    display: flex;
+    flex-direction: column;
     background-color: var(--primary-bg);
+    transition: margin-left 0.3s ease;
 }
 
 .content-wrapper {
