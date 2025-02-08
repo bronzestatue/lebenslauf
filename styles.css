@@ -132,6 +132,21 @@ body {
     opacity: 0.3;
 }
 
+/* Sidebar Header und Symbol Positionierung */
+#sidebar-header {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0.3;
+    transition: display 0.3s ease, opacity 0.3s ease;
+}
+
+.sidebar.collapsed #sidebar-header {
+    display: block;
+    opacity: 1;
+}
+
 /* Button zum Erweitern der Sidebar */
 .toggle-button {
     display: none;
@@ -254,7 +269,7 @@ section {
 
 /* Main content */
 .main-content {
-    margin-left: calc(var(--sidebar-width) + 100);
+    margin-left: var(--sidebar-width);
     display: flex;
     flex-direction: column;
     background-color: var(--primary-bg);
@@ -263,7 +278,7 @@ section {
 
 /* Main content */
 .main-content::after {
-    margin-left: calc(var(--sidebar-width) + 100);
+    margin-left: calc(var(--sidebar-width) + 100px);
     display: flex;
     flex-direction: column;
     background-color: var(--primary-bg);
