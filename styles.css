@@ -134,7 +134,6 @@ body {
 
 /* Sidebar Header und Symbol Positionierung */
 #sidebar-header {
-    display: none;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -270,15 +269,6 @@ section {
 /* Main content */
 .main-content {
     margin-left: var(--sidebar-width);
-    display: flex;
-    flex-direction: column;
-    background-color: var(--primary-bg);
-    transition: margin-left 0.3s ease;
-}
-
-/* Main content */
-.main-content::after {
-    margin-left: calc(var(--sidebar-width) + 100px);
     display: flex;
     flex-direction: column;
     background-color: var(--primary-bg);
