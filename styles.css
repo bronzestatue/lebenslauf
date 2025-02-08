@@ -26,6 +26,7 @@ body {
 #terminbuchung {
     margin-top: 1rem;
     padding: 1rem;
+    margin-left: 1rem;
 }
 
 /* Calendly Container */
@@ -167,7 +168,7 @@ body {
     font-size: 1.125rem;
     pointer-events: none;
     text-decoration: none;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
 }
 
     /* Stil beim Hover */
@@ -283,7 +284,7 @@ section {
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
-    padding-left: 1rem;
+    padding-left: inherit;
     padding-right: inherit;
 }
 
