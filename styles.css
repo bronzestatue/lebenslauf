@@ -72,6 +72,9 @@ body {
 /* Layout */
 .container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
     min-height: 100vh;
 }
 
@@ -87,17 +90,6 @@ body {
     width: 320px;
     padding: 2rem;
     margin-right: 2rem;
-    transition: left 0.3s ease; /* Animation für das Einklappen */
-}
-
-/* Standardstil der Sidebar */
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #111827;
     transition: left 0.3s ease; /* Animation für das Einklappen */
 }
 
@@ -155,6 +147,17 @@ body {
         cursor: pointer;
         pointer-events: auto;
     }
+
+/* Section styles */
+section {
+    margin-left: 250px;
+    margin-bottom: 4rem;
+    padding-right: 5vw; /* Add padding to the right for better readability */
+    transition: margin-left 0.3s ease; /* Animation für das Einklappen */
+    width: 100%;
+    max-width: 1200px; /* Begrenzung der maximalen Breite für bessere Lesbarkeit */
+    padding: 1rem;
+}
 
 .sections > div {
     margin-bottom: 1.5rem;
@@ -231,10 +234,8 @@ body {
     max-width: 48rem;
 }
 
-/* Section styles */
-section {
-    margin-bottom: 4rem;
-    padding-right: 5vw; // Add padding to the right for better readability
+.sidebar.collapsed ~ section {
+    margin-left: 50px; /* Platz für die eingeklappte Sidebar */
 }
 
 .section-header {
@@ -455,7 +456,8 @@ section {
 #certifications,
 #publications {
     scroll-margin-top: 2rem;
-}
+},
+#education
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -491,5 +493,17 @@ section {
     .calendly-inline-widget {
         min-width: 100%; /* Ensure the widget takes full width */
         height: 1000px; /* Adjust height as needed */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    section {
+        padding-right: 4rem; /* Moderate Padding für mittlere Bildschirme */
+    }
+}
+
+@media (min-width: 1201px) {
+    section {
+        padding-right: 6rem; /* Größere Padding für größere Bildschirme */
     }
 }
