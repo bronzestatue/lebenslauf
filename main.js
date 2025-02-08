@@ -62,6 +62,16 @@ const experiences = [
         location: "Hamburg",
         companyLink: "https://www.motion-fashion.com/",
         description: "Ein zentraler Teil meiner Arbeit war der Export von Daten aus dem systeminternen proMO-System in das SAP XML-Format. Dieser Prozess umfasste mehrere Schritte, darunter die Extraktion relevanter Daten aus proMO, die Transformation dieser Daten in das XML-Format und die anschließende Integration in das SAP-System. Durch diese Arbeit konnte ich sicherstellen, dass die Daten nahtlos zwischen den Systemen übertragen wurden, was die Effizienz der Datenverarbeitung und -analyse erheblich steigerte. Ein weiteres bedeutendes Projekt war die Integration von Google Maps in die Präsentationsseite der Firma.Ziel war es, eine interaktive Karte mit Standortkennungen und Marktübersichten zu erstellen, die den Nutzern eine einfache und visuell ansprechende Möglichkeit bot, Informationen über die verschiedenen Standorte und Märkte des Unternehmens zu erhalten.Ich war für die Implementierung der Google Maps API verantwortlich, die es ermöglichte, Standorte dynamisch zu kennzeichnen und zusätzliche Informationen anzuzeigen.Diese Integration erleichterte den Nutzern den Zugriff auf wichtige Standortdaten und verbesserte die Benutzerfreundlichkeit der Präsentationsseite erheblich. Im Bereich des Produktinformationsmanagements(PIM) war ich für die Verwaltung und Optimierung der Produktdaten verantwortlich.Dies umfasste die Erfassung, Speicherung und Pflege von Produktinformationen, um sicherzustellen, dass alle Daten aktuell und genau waren.Ich entwickelte und implementierte Prozesse zur Konsolidierung und Standardisierung der Produktinformationen, die es dem Unternehmen ermöglichten, konsistente und verlässliche Daten für Marketing, Vertrieb und Kundensupport bereitzustellen.Durch die Einführung automatisierter Workflows und Validierungsregeln konnte ich die Effizienz des Produktinformationsmanagements weiter verbessern und die Fehlerquote bei der Datenerfassung reduzieren."
+    },
+    {
+        title: "Team Lead",
+        company: "eeTech",
+        startDate: "02.2013",
+        endDate: "06.2013",
+        employmentType: "Vollzeit",
+        location: "Melbourne",
+        companyLink: " ",
+        description: "Unser Hauptfokus lag auf dem Vertrieb und der Installation von Energiesparleisten, die speziell dafür entwickelt wurden, den Standby-Modus von Fernsehern zu erkennen und den unnötigen Energieverbrauch zu verhindern. Diese Technologie ermöglichte es den Haushalten, ihre Energiekosten erheblich zu senken. Mein Team und ich führten umfassende Beratungen durch, um den Kunden den Nutzen und die Funktionsweise der Energiesparleisten zu erklären. Wir übernahmen auch die Installation vor Ort und stellten sicher, dass die Geräte ordnungsgemäß funktionierten. Das Projekt wurde im Auftrag der australischen Regierung, Energieversorgern und durch steuerliche Anreize finanziert. Diese Zusammenarbeit ermöglichte es uns, die Energiesparleisten zu subventionierten Preisen anzubieten und eine breite Akzeptanz bei den Verbrauchern zu erzielen. Ich koordinierte die Zusammenarbeit mit den beteiligten Partnern und stellte sicher, dass alle vertraglichen Verpflichtungen erfüllt wurden. Die Finanzierung des Projekts durch staatliche Stellen und Energieversorger unterstrich die Bedeutung und den Nutzen der Energiespartechnologie. Als Teamleiter war ich verantwortlich für die Leitung und Motivation eines 12 Personen starken Verkaufsteams. Ich implementierte effektive Verkaufsstrategien, um die Fähigkeiten und das Wissen meines Teams kontinuierlich zu verbessern. Durch regelmäßige Meetings, klare Zielsetzungen und Feedbackrunden konnte ich eine positive und produktive Arbeitsatmosphäre schaffen. Diese Maßnahmen führten dazu, dass unser Team eine Installationseffizienz von 70% über dem Durchschnitt von 10 Installationen pro Tag erreichte."
     }
 ];
 
@@ -84,6 +94,12 @@ const certifications = [
         issuer: "Codecademy",
         year: "2023",
         url: "https://www.codecademy.com/profiles/constantinsinowski/certificates/1cb76ac48943853ca32c394afeb491c9"
+    },
+    {
+        title: "KNIME L1",
+        issuer: "KNIME",
+        year: "2023",
+        url: "https://www.credly.com/badges/891bf1ee-0b27-4b8d-945a-1a1587e1d36b/public_url"
     }
 ];
 
@@ -184,9 +200,20 @@ const publications = [
   // Add all other publications here...
 ];
 
+// Education data
+const education = [
+    {
+        title: "Wirtschaftsingenieurswesen Digital Engineering & Management",
+        degree: "Bachelor of Engineering",
+        institution: "Hochschule Fresenius",
+        graduation: "2024",
+        url: "https://www.fernstudium-fresenius.de/bachelor/wirtschaftsingenieurwesen-digital-engineering/"
+    }
+];
+
 function createExperienceElement(experience) {
-    const div = document.createElement('div');
-    div.className = 'experience-item';
+    const div = document.createElement("div");
+    div.className = "experience-item";
 
     div.innerHTML = `
     <div class="experience-header">
@@ -203,13 +230,10 @@ function createExperienceElement(experience) {
     return div;
 }
 
-
-
-
 // Function to create certification elements
 function createCertificationElement(certifications) {
-    const div = document.createElement('div');
-    div.className = 'certification-item';
+    const div = document.createElement("div");
+    div.className = "certification-item";
 
     div.innerHTML = `
     <div class="group relative flex justify-between items-start">
@@ -229,23 +253,46 @@ function createCertificationElement(certifications) {
 }
 
 // Function to create publication elements
-function createPublicationElement(publication) {
-  const div = document.createElement('div');
-  div.className = 'publication-item';
+function createPublicationElement(pub) {
+  const div = document.createElement("div");
+  div.className = "publication-item";
   
   div.innerHTML = `
     <div class="publication-header">
       <div>
-        <a href="${publication.url}" class="publication-title">
-          <h3>${publication.title}</h3>
+        <a href="${pub.url}" class="publication-title">
+          <h3>${pub.title}</h3>
         </a>
-        <p class="date">${publication.publisher}, ${publication.year}</p>
+        <p class="date">${pub.publisher}, ${pub.year}</p>
       </div>
-      <a href="${publication.url}" class="external-link" aria-label="External link to publication">
+      <a href="${pub.url}" class="external-link" aria-label="External link to publication">
         <i data-lucide="external-link"></i>
       </a>
     </div>
-    <p class="description">${publication.description}</p>
+    <p class="description">${pub.description}</p>
+  `;
+  
+  return div;
+}
+
+// Function to create education elements
+function createEducationElement(edu) {
+  const div = document.createElement("div");
+  div.className = "education-item";
+  
+  div.innerHTML = `
+    <div class="education-header">
+      <div>
+        <a href="${edu.url}" class="education-title">
+          <h3>${edu.degree}</h3>
+          <p>${edu.title}</p>
+        </a>
+        <p class="date">${edu.institution}, ${edu.graduation}</p>
+      </div>
+      <a href="${edu.url}" class="external-link" aria-label="External link to programme">
+        <i data-lucide="external-link"></i>
+      </a>
+    </div>
   `;
   
   return div;
@@ -253,7 +300,7 @@ function createPublicationElement(publication) {
 
 // Load experiences
 function loadExperiences() {
-    const container = document.querySelector('.experience-items');
+    const container = document.querySelector(".experience-items");
     experiences.forEach(exp => {
         container.appendChild(createExperienceElement(exp));
     });
@@ -261,7 +308,7 @@ function loadExperiences() {
 
 // Load certifications
 function loadCertifications() {
-    const container = document.querySelector('.certification-items');
+    const container = document.querySelector(".certification-items");
     certifications.forEach(cert => {
         container.appendChild(createCertificationElement(cert));
     });
@@ -269,7 +316,7 @@ function loadCertifications() {
 
 // Load publications
 function loadPublications() {
-  const container = document.querySelector('.publication-items');
+  const container = document.querySelector(".publication-items");
   publications.forEach(pub => {
     container.appendChild(createPublicationElement(pub));
   });
@@ -277,40 +324,50 @@ function loadPublications() {
   lucide.createIcons();
 }
 
+// Load education
+function loadEducation() {
+  const container = document.querySelector(".education-items");
+  education.forEach(edu => {
+    container.appendChild(createEducationElement(edu));
+  });
+  // Reinitialize icons for newly added elements
+  lucide.createIcons();
+}
+
 // Floating navigation functionality
 function initFloatingNav() {
-  const nav = document.querySelector('.floating-nav');
-  const navLinks = nav.querySelectorAll('a');
-    const sections = document.querySelectorAll('section[id]');
-    const sidebar = document.getElementById('sidebar');
+  const nav = document.querySelector(".floating-nav");
+  const navLinks = nav.querySelectorAll("a");
+    const sections = document.querySelectorAll("section[id]");
+    const sidebar = document.getElementById("sidebar");
   let lastScrollY = window.scrollY;
   let ticking = false;
 
   // Smooth scroll to section
   navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener("click", (e) => {
       e.preventDefault();
-      const targetId = link.getAttribute('href');
+      const targetId = link.getAttribute("href");
       const targetSection = document.querySelector(targetId);
-      targetSection.scrollIntoView({ behavior: 'smooth' });
+      targetSection.scrollIntoView({ behavior: "smooth" });
     });
   });
 
   // Update active section
   function updateActiveSection() {
-    let currentSection = '';
+    let currentSection = "";
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop - 300) {
-        currentSection = section.getAttribute('id');
+        currentSection = section.getAttribute("id");
       }
     });
 
     navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentSection}`) {
-        link.classList.add('active');
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${currentSection}`) {
+        link.classList.add("active");
       }
     });
   }
@@ -318,13 +375,13 @@ function initFloatingNav() {
   // Hide/show navigation based on scroll direction
   function updateNavVisibility() {
     const currentScrollY = window.scrollY;
-    nav.classList.toggle('hidden', currentScrollY > lastScrollY && currentScrollY > 100);
+    nav.classList.toggle("hidden", currentScrollY > lastScrollY && currentScrollY > 100);
     lastScrollY = currentScrollY;
     ticking = false;
   }
 
   // Scroll event handler
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     if (!ticking) {
       window.requestAnimationFrame(() => {
         updateNavVisibility();
@@ -340,10 +397,11 @@ function initFloatingNav() {
 }
 
 // Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   loadExperiences();
   loadCertifications();
   loadPublications();
+  loadEducation();
   initFloatingNav();
   lucide.createIcons();
 });
