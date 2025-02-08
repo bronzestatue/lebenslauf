@@ -26,11 +26,12 @@ body {
 #terminbuchung {
     margin-top: 1rem;
     padding: 1rem;
-    margin-left: 1rem;
 }
 
 /* Calendly Container */
 .calendly-container {
+    display: flex;
+    justify-content: flex-start;
     position: relative;
     margin-top: 1rem;
     margin-left: var(--sidebar-width);
@@ -190,6 +191,7 @@ section {
     width: 100%;
     max-width: 1200px; /* Begrenzung der maximalen Breite für bessere Lesbarkeit */
     padding: 1rem;
+    position: relative;
 }
 
 .sections > div {
@@ -284,6 +286,7 @@ section {
 
 .section-header {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
@@ -301,6 +304,8 @@ section {
         font-size: 1.5rem;
         font-weight: 600;
         margin: 0;
+        position: absolute;
+        left: 0;
     }
 
     .section p {
