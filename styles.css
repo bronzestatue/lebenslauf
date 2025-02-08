@@ -23,6 +23,7 @@ body {
 
 /* Calendly Container */
 .calendly-container {
+    position: fixed;
     margin-top: 1rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0.5rem;
@@ -30,21 +31,28 @@ body {
     overflow: hidden;
     text-align: center;
     padding: 1rem;
-    padding-left: 0rem;
+    margin-left: auto;
+    padding-left: 150rem;
     padding-right: 30rem;
+    transition: margin-left 0.3s ease; /* Übergang für die Margins */
 }
 
     .calendly-container:hover {
         background: rgba(255, 255, 255, 0.2);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding-right: 60rem;
     }
 
-.calendly-inline-widget {
-    min-width: 450px;
-    height: 1000px;
-    background: transparent;
-    padding-left: 1rem;
+.sidebar.collapsed ~ .calendly-container {
+    margin-left: auto; /* Platz für die eingeklappte Sidebar */
 }
+
+    .calendly-inline-widget {
+        min-width: 450px;
+        height: 1000px;
+        background: transparent;
+        padding-left: 1rem;
+    }
 
 /* Update sidebar content for better scrolling with Calendly */
 .sidebar-content {
@@ -106,7 +114,7 @@ body {
             top: 0;
             width: 50px;
             height: 100%;
-            background-color: rgba(17, 24, 39, 0.5); /* Halbtransparenter Bereich zum Hovern */
+            background-color: rgba(255, 255, 255, 0.1); /* Halbtransparenter Bereich zum Hovern */
             cursor: pointer;
         }
 
@@ -134,7 +142,7 @@ body {
     }
 
 .subtitle {
-    color: inherit;
+    color: var(--text-light);
     font-size: 1.125rem;
     padding-left: 1rem;
     pointer-events: none;
