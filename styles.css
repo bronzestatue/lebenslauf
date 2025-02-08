@@ -176,6 +176,7 @@ body {
 /* Section styles */
 section {
     margin-bottom: 4rem;
+    padding-right: 48rem;
 }
 
 .section-header {
@@ -304,6 +305,34 @@ section {
     }
 
     .certification-title h3 {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+/* Education */
+.education-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.education-title {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+    .education-title:hover {
+        color: blue; /* Change color to blue on hover */
+    }
+
+    .education-title h3 {
         font-size: 1.25rem;
         font-weight: 500;
     }
