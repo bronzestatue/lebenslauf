@@ -27,31 +27,33 @@ const certifications = [
 ];
 
 // Function to create certification elements
-function createCertificationElement(certifications) {
-    const div = document.createElement("div");
-    div.className = "certification-item";
-
+function createCertificationElement(cert) {
+    const div = document.createElement('div');
+    div.className = 'certification-item';
     div.innerHTML = `
-    <div class="group relative flex justify-between items-start">
-      <div>
-        <a href="${certifications.url}" class="publication-title">
-          <h3>${certifications.title}</h3>
+      <div class="group relative flex justify-between items-start">
+        <div>
+          <a href="${cert.url}" class="publication-title">
+            <h3>${cert.title}</h3>
+          </a>
+          <p class="date">${cert.issuer}, ${cert.year}</p>
+        </div>
+        <a href="${cert.url}" class="external-link" aria-label="External link to certification">
+          <i data-lucide="external-link"></i>
         </a>
-        <p class="date">${certifications.issuer}, ${certifications.year}</p>
       </div>
-      <a href="${certifications.url}" class="external-link" aria-label="External link to certification">
-        <i data-lucide="external-link"></i>
-      </a>
-    </div>
-  `;
-
+    `;
     return div;
 }
 
 // Load certifications
 function loadCertifications() {
-    const container = document.querySelector(".certification-items");
+    const container = document.querySelector('.certification-items');
     certifications.forEach(cert => {
         container.appendChild(createCertificationElement(cert));
     });
+    // Reinitialize icons for newly added elements
+    lucide.createIcons();
 }
+
+export { loadCertifications };

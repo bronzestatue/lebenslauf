@@ -1,0 +1,16 @@
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.contact-item i {
+    margin-right: 0.5rem;
+}

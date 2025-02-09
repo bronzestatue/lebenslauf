@@ -1,0 +1,40 @@
+:root {
+  --primary-bg: #ffffff;
+  --text-primary: #111827;
+}
+
+/* Import supplementary styles */
+@import url('sidebar.css');
+@import url('calendly.css');
+@import url('responsive.css');
+@import url('experience.css');
+@import url('certification.css');
+@import url('publication.css');
+@import url('education.css');
+@import url('navbar.css');
+@import url('focus.css');
+@import url('contact.css');
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Calibri", Arial, sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-primary);
+  margin: 0;
+  /* Ensure consistent spacing */
+}
+
+/* Core container layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 1rem;
+}
+

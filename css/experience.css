@@ -13,7 +13,7 @@
 .experience-header h3 {
     font-size: 1.25rem;
     font-weight: 500;
-    margin-bottom: 0; /* Add extra space after h3 headings */
+    margin-bottom: 0; /* Ensure consistent spacing */
 }
 
 .company a {
@@ -38,4 +38,9 @@
 .location,
 .description {
     color: var(--text-secondary);
+}
+
+/* Ensure consistent section formatting */
+section {
+    margin-bottom: 4rem;
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constantin Sinowski</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.263.0"></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
@@ -14,6 +14,7 @@
     <nav class="floating-nav">
         <ul>
             <li><a href="#focus">Fokus</a></li>
+            <li><a href="#contact">Kontakt</a></li>
             <li><a href="#appointment">Terminbuchung</a></li>
             <li><a href="#certifications">Zertifizierungen</a></li>
             <li><a href="#experiences">Erfahrung</a></li>
@@ -25,10 +26,14 @@
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
+
+            <!-- Profile Picture  
             <div class="profile-picture-container">
-                <img src="/media/images/profile-Sinowski.jpg" alt="Profilbild von Constantin Sinowski" class="profile-picture">
+                <img src="/media/images/profile-Sinowski_noBackground.PNG" alt="Profilbild von Constantin Sinowski" class="profile-picture">
             </div>
-            <button class="toggle-button" onclick="initializeSidebar()">☰</button>
+            -->
+            
+
             <!-- Sidebar Content -->
             <div class="sidebar-content">
 
@@ -42,12 +47,16 @@
                 <div class="sections">
                     <div>
                         <h2>Kontakt</h2>
-                        <div class="contact-links">
-                            <a href="mailto:constantin@sinowski.de" class="contact-item" title="E-Mail senden">
+                        <div id="contact" class="contact-details">
+                            <a href="mailto:constantin@sinowski.de"
+                                class="contact-item"
+                                title="E-Mail senden">
                                 <i data-lucide="mail"></i>
                                 <span>constantin@sinowski.de</span>
                             </a>
-                            <a href="#appointment" class="contact-item" title="Telefonnummer anzeigen">
+                            <a href="#appointment"
+                                class="contact-item"
+                                title="Telefonnummer anzeigen">
                                 <i data-lucide="phone"></i>
                                 <span>+49 156 79001672</span>
                             </a>
@@ -77,8 +86,7 @@
                 </div>
             </div>
         </aside>
-        <script src="js/sidebar.js"></script>
-
+        
         <!-- Main Content -->
         <main class="main-content">
             <div class="content-wrapper">
@@ -110,7 +118,6 @@
                     <div class="certification-items">
                     </div>
                 </section>
-                <script src="js/certification.js"></script>
 
                 <!-- Experience Items -->
                 <section id="experiences">
@@ -120,7 +127,6 @@
                     <div class="experience-items">
                     </div>
                 </section>
-                <script src="js/experience.js"></script>
 
                 <!-- Publication Items -->
                 <section id="publications">
@@ -130,7 +136,6 @@
                     <div class="publication-items">
                     </div>
                 </section>
-                <script src="js/publication.js"></script>
 
                 <!-- Education Items -->
                 <section id="education">
@@ -140,7 +145,6 @@
                     <div class="education-items">
                     </div>
                 </section>
-                <script src="js/education.js"></script>
 
             </div>
         </main>

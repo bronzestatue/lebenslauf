@@ -30,7 +30,7 @@ function createEducationElement(edu) {
     `;
     
     return div;
-  }
+}
 
 // Load education
 function loadEducation() {
@@ -40,6 +40,6 @@ function loadEducation() {
     });
     // Reinitialize icons for newly added elements
     lucide.createIcons();
-  }
+}
 
 export { loadEducation };

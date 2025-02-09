@@ -97,6 +97,8 @@ function loadExperiences() {
     experiences.forEach(exp => {
         container.appendChild(createExperienceElement(exp));
     });
+    // Reinitialize icons for newly added elements
+    lucide.createIcons();
 }
 
 export { loadExperiences };

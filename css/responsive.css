@@ -1,0 +1,53 @@
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 2rem;
+    }
+
+    .external-link {
+        opacity: 1;
+        position: static;
+        margin-left: 0.5rem;
+    }
+
+    .floating-nav {
+        display: none; /* Hide navigation bar on mobile devices */
+    }
+
+    .calendly-container {
+        margin-left: 0.5rem; /* Small margin to the left */
+        margin-right: 0.5rem; /* Small margin to the right */
+        width: calc(100% - 1rem); /* Adjust width to fit the screen */
+        height: 1200px; /* Adjust height for mobile devices as needed */
+    }
+
+    .calendly-inline-widget {
+        min-width: 100%; /* Ensure the widget takes full width */
+        height: 1000px; /* Adjust height as needed */
+    }
+
+    .profile-picture-container {
+        display: block; /* Nur in der mobilen Version anzeigen */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    section {
+        padding-right: 4rem; /* Moderate Padding für mittlere Bildschirme */
+    }
+}
+
+@media (min-width: 1201px) {
+    section {
+        padding-right: 6rem; /* Größere Padding für größere Bildschirme */
+    }
+}
