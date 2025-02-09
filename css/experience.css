@@ -1,0 +1,41 @@
+/* Experience items */
+.experience-item {
+    margin-bottom: 2rem;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.experience-header h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0; /* Add extra space after h3 headings */
+}
+
+.company a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.company a:hover {
+    text-decoration: underline;
+}
+
+.date {
+    color: var(--text-secondary);
+}
+
+.details {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.employment-type,
+.location,
+.description {
+    color: var(--text-secondary);
+}

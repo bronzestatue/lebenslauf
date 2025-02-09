@@ -1,0 +1,27 @@
+/* Certifications */
+.certification-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.certification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.certification-title {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.certification-title:hover {
+    color: blue; /* Change color to blue on hover */
+}
+
+.certification-title h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}

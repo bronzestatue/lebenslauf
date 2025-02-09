@@ -1,0 +1,217 @@
+/* Profile Picture */
+.profile-picture-container {
+    display: none; /* Standardmäßig ausgeblendet */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header {
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+}
+
+.header h1 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-size: 1.125rem;
+    pointer-events: none;
+    text-decoration: none;
+    padding-left: 1rem;
+}
+
+/* Stil beim Hover */
+.subtitle:hover {
+    color: white; /* Anpassen der Link-Farbe bei Hover */
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* Section styles */
+section {
+    margin-left: var(--sidebar-width);
+    margin-bottom: 4rem;
+    padding-right: 5vw; /* Add padding to the right for better readability */
+    transition: margin-left 0.3s ease; /* Animation für das Einklappen */
+    width: 100%;
+    max-width: 1200px; /* Begrenzung der maximalen Breite für bessere Lesbarkeit */
+    padding: 1rem;
+    position: relative;
+}
+
+.sections > div {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+
+.sections h2 {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+
+/* Contact section */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-left: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-item:hover {
+    color: white;
+}
+
+/* Social links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+.social-links a {
+    color: var(--text-light);
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+/* Salary section */
+.salary {
+    color: #d1d5db;
+    padding-left: 1rem;
+}
+
+.salary-note {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    padding-left: 1rem;
+}
+
+/* Update sidebar content for better scrolling with Calendly */
+.sidebar-content {
+    position: sticky;
+    top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent; /* For Firefox */
+}
+
+.sidebar-content::-webkit-scrollbar {
+    width: 6px; /* For WebKit browsers */
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+    background: transparent; /* For WebKit browsers */
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2); /* For WebKit browsers */
+    border-radius: 3px; /* For WebKit browsers */
+}
+
+/* Standardstil der Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100%;
+    background-color: var(--sidebar-bg);
+    color: white;
+    padding: 2rem;
+    transition: left 0.3s ease;
+}
+
+/* Eingeklappte Sidebar */
+.sidebar.collapsed {
+    left: -150px;
+}
+
+/* Stil, wenn die Sidebar leicht sichtbar ist */
+.sidebar.collapsed::after {
+    content: '';
+    position: absolute;
+    right: -100px;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+/* Sidebar-Inhalte */
+.sidebar-content {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-content {
+    opacity: 0.3;
+}
+
+/* Sidebar Header und Symbol Positionierung */
+#sidebar-header {
+    display: block; /* Ensure the header is always displayed */
+    position: relative;
+    opacity: 1; /* Ensure full opacity */
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed #sidebar-header {
+    opacity: 1;
+}
+
+/* Button zum Erweitern der Sidebar */
+.toggle-button {
+    display: none;
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar.collapsed .toggle-button {
+    display: block;
+}
+
+.sidebar.collapsed ~ section {
+    margin-left: 50px; /* Platz für die eingeklappte Sidebar */
+}
+
+.sidebar.collapsed ~ .main-content {
+    margin-left: 50px; /* Adjust margin when sidebar is collapsed */
+    width: calc(100% - 50px); /* Adjust width when sidebar is collapsed */
+}
