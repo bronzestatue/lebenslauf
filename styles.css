@@ -24,7 +24,7 @@ body {
 
 /* Profile Picture */
 .profile-picture-container {
-    display: none; /* Standardmäßig ausgeblendet */
+    display: none; /* Standardmï¿½ï¿½ig ausgeblendet */
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -51,7 +51,7 @@ body {
     padding: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    transition: margin-left 0.3s ease; /* Übergang für die Margins */
+    transition: margin-left 0.3s ease; /* ï¿½bergang fï¿½r die Margins */
 }
 
     .calendly-container:hover {
@@ -60,7 +60,7 @@ body {
     }
 
 .sidebar.collapsed ~ .calendly-container {
-    margin-left: var(--sidebar-width); /* Platz für die eingeklappte Sidebar */
+    margin-left: var(--sidebar-width); /* Platz fï¿½r die eingeklappte Sidebar */
 }
 
 .calendly-inline-widget {
@@ -80,21 +80,21 @@ body {
     top: 2rem;
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent; /* For Firefox */
 }
 
     .sidebar-content::-webkit-scrollbar {
-        width: 6px;
+        width: 6px; /* For WebKit browsers */
     }
 
     .sidebar-content::-webkit-scrollbar-track {
-        background: transparent;
+        background: transparent; /* For WebKit browsers */
     }
 
     .sidebar-content::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 3px;
+        background-color: rgba(255, 255, 255, 0.2); /* For WebKit browsers */
+        border-radius: 3px; /* For WebKit browsers */
     }
 
 /* Layout */
@@ -148,20 +148,19 @@ body {
 
 /* Sidebar Header und Symbol Positionierung */
 #sidebar-header {
-    display: none;
+    display: block; /* Ensure the header is always displayed */; /* Ensure the header is always displayed */
     position: absolute;
     right: 10px;
     top: 10px;
-    opacity: 0.3;
-    transition: display 0.3s ease, opacity 0.3s ease;
+    opacity: 1; /* Ensure full opacity */* Ensure full opacity */
+    transition: opacity 0.3s ease;
 }
 
 .sidebar.collapsed #sidebar-header {
-    display: block;
     opacity: 1;
 }
 
-/* Button zum Erweitern der Sidebar */
+/* Button zum Erweitern der Sidebar *//* Button zum Erweitern der Sidebar */
 .toggle-button {
     display: none;
     position: absolute;
@@ -174,145 +173,154 @@ body {
     cursor: pointer;
 }
 
-.sidebar.collapsed .toggle-button {
+.sidebar.collapsed .toggle-button {.sidebar.collapsed .toggle-button {
     display: block;
 }
 
-.header {
-    margin-bottom: 3rem;
+.header {.header {
+    margin-bottom: 3rem;n-bottom: 3rem;
     padding-left: 1rem;
 }
 
-    .header h1 {
-        font-size: 1.875rem;
+    .header h1 {    .header h1 {
+        font-size: 1.875rem;e: 1.875rem;
         font-weight: bold;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem;rem;
         padding-left: 1rem;
     }
 
-.subtitle {
-    color: var(--text-light);
+.subtitle {.subtitle {
+    color: var(--text-light);var(--text-light);
     font-size: 1.125rem;
-    pointer-events: none;
-    text-decoration: none;
+    pointer-events: none;;
+    text-decoration: none;;
     padding-left: 1rem;
 }
 
-    /* Stil beim Hover */
+    /* Stil beim Hover */    /* Stil beim Hover */
     .subtitle:hover {
-        color: white; /* Anpassen der Link-Farbe bei Hover */
+        color: white; /* Anpassen der Link-Farbe bei Hover */ /* Anpassen der Link-Farbe bei Hover */
         cursor: pointer;
-        pointer-events: auto;
+        pointer-events: auto;auto;
     }
 
-/* Section styles */
+/* Section styles *//* Section styles */
 section {
-    margin-left: var(--sidebar-width);
+    margin-left: var(--sidebar-width);n-left: var(--sidebar-width);
     margin-bottom: 4rem;
-    padding-right: 5vw; /* Add padding to the right for better readability */
-    transition: margin-left 0.3s ease; /* Animation für das Einklappen */
+    padding-right: 5vw; /* Add padding to the right for better readability *//* Add padding to the right for better readability */
+    transition: margin-left 0.3s ease; /* Animation fï¿½r das Einklappen */
     width: 100%;
-    max-width: 1200px; /* Begrenzung der maximalen Breite für bessere Lesbarkeit */
+    max-width: 1200px; /* Begrenzung der maximalen Breite fï¿½r bessere Lesbarkeit */200px; /* Begrenzung der maximalen Breite fï¿½r bessere Lesbarkeit */
     padding: 1rem;
-    position: relative;
+    position: relative;tive;
 }
 
-.sections > div {
-    margin-bottom: 1.5rem;
+.sections > div {.sections > div {
+    margin-bottom: 1.5rem;: 1.5rem;
     padding-left: 1rem;
 }
 
-.sections h2 {
-    text-transform: uppercase;
+.sections h2 {.sections h2 {
+    text-transform: uppercase;form: uppercase;
     font-size: 0.875rem;
-    letter-spacing: 0.05em;
-    color: var(--text-light);
+    letter-spacing: 0.05em;em;
+    color: var(--text-light););
     margin-bottom: 1.5rem;
     padding-left: 1rem;
 }
 
-/* Contact section */
+/* Contact section *//* Contact section */
 .contact-links {
-    display: flex;
-    flex-direction: column;
+    display: flex;x;
+    flex-direction: column;: column;
     gap: 0.75rem;
-    padding-left: 1rem;
+    padding-left: 1rem; 1rem;
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
+.contact-item {.contact-item {
+    display: flex;ex;
+    align-items: center;enter;
     gap: 0.75rem;
-    color: #d1d5db;
-    text-decoration: none;
-    transition: color 0.2s;
+    color: #d1d5db;b;
+    text-decoration: none;: none;
+    transition: color 0.2s;;
 }
 
-    .contact-item:hover {
+    .contact-item:hover {    .contact-item:hover {
         color: white;
     }
 
-/* Social links */
+/* Social links *//* Social links */
 .social-links {
-    display: flex;
+    display: flex;ex;
     gap: 1rem;
-    padding-left: 1rem;
+    padding-left: 1rem;ft: 1rem;
 }
 
-    .social-links a {
-        color: var(--text-light);
+    .social-links a {    .social-links a {
+        color: var(--text-light);text-light);
         transition: color 0.2s;
     }
 
-        .social-links a:hover {
+        .social-links a:hover {        .social-links a:hover {
             color: white;
         }
 
-/* Salary section */
+/* Salary section *//* Salary section */
 .salary {
-    color: #d1d5db;
-    padding-left: 1rem;
+    color: #d1d5db;: #d1d5db;
+    padding-left: 1rem;rem;
 }
 
-.salary-note {
-    color: var(--text-light);
+.salary-note {.salary-note {
+    color: var(--text-light);(--text-light);
     font-size: 0.875rem;
     margin-top: 0.25rem;
     padding-left: 1rem;
 }
 
-/* Main content */
+/* Main content *//* Main content */
 .main-content {
-    margin-left: var(--sidebar-width);
+    margin-left: var(--sidebar-width);: var(--sidebar-width);
     display: flex;
-    flex-direction: column;
-    background-color: var(--primary-bg);
+    flex-direction: column;: column;
+    background-color: var(--primary-bg);-primary-bg);
     transition: margin-left 0.3s ease;
+    align-items: flex-start; /* Align items to the start (left) */items to the start (left) */
+    padding-left: 2rem; /* Add padding to the left for centering *//
+    padding-right: 2rem; /* Add padding to the right for centering */*/
+    width: calc(100% - var(--sidebar-width)); /* Ensure the main content takes the remaining width */ent takes the remaining width */
+}
+
+.sidebar.collapsed ~ .main-content {main-content {
+    margin-left: 50px; /* Adjust margin when sidebar is collapsed */Adjust margin when sidebar is collapsed */
+    width: calc(100% - 50px); /* Adjust width when sidebar is collapsed */ar is collapsed */
 }
 
     /* Main content */
     .main-content::after {
-        margin-left: calc(var(--sidebar-width) + 100px);
-        display: flex;
-        flex-direction: column;
-        background-color: var(--primary-bg);
-        transition: margin-left 0.3s ease;
-    }
+        margin-left: calc(var(--sidebar-width) + 100px);   margin-left: calc(var(--sidebar-width) + 100px);
+        display: flex;        display: flex;
+        flex-direction: column;tion: column;
+        background-color: var(--primary-bg);lor: var(--primary-bg);
+        transition: margin-left 0.3s ease;       transition: margin-left 0.3s ease;
+    }    }
 
 .content-wrapper {
-    max-width: 48rem;
-}
+    max-width: 48rem;   max-width: 48rem;
+}}
 
-.sidebar.collapsed ~ section {
-    margin-left: 50px; /* Platz für die eingeklappte Sidebar */
+.sidebar.collapsed ~ section { ~ section {
+    margin-left: 50px; /* Platz fï¿½r die eingeklappte Sidebar */fï¿½r die eingeklappte Sidebar */
 }
 
 .section-header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start;start;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: 0.5rem;   gap: 0.5rem;
+    margin-bottom: 1.5rem;    margin-bottom: 1.5rem;
     margin-left: auto;
     padding-left: inherit;
     padding-right: inherit;
@@ -320,268 +328,273 @@ section {
 
     .section-header i {
         font-size: 1.5rem;
-        color: var(--text-primary);
+        color: var(--text-primary);-primary);
     }
 
-    .section-header h2 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 0;
-        position: absolute;
+    .section-header h2 {der h2 {
+        font-size: 1.5rem;   font-size: 1.5rem;
+        font-weight: 600;        font-weight: 600;
+        margin: 0;in: 0;
+        position: absolute;te;
         left: 0;
-    }
+    }   }
 
 .section p {
-    margin-bottom: 1rem;
-    color: var(--text-secondary);
+    margin-bottom: 1rem; 1rem;
+    color: var(--text-secondary);condary);
 }
 
-/* Experience items */
+/* Experience items */*/
 .experience-item {
     margin-bottom: 2rem;
 }
 
-.experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 0.5rem;
+.experience-header {experience-header {
+    display: flex;    display: flex;
+    justify-content: space-between;between;
+    align-items: flex-start;;
+    margin-bottom: 0.5rem;;
 }
 
-    .experience-header h3 {
-        font-size: 1.25rem;
+    .experience-header h3 {    .experience-header h3 {
+        font-size: 1.25rem;-size: 1.25rem;
         font-weight: 500;
-        margin-bottom: 0; /* Add extra space after h3 headings */
-    }
+        margin-bottom: 0; /* Add extra space after h3 headings *//* Add extra space after h3 headings */
+    }   }
 
 .company a {
     color: var(--text-secondary);
-    text-decoration: none;
-}
+    text-decoration: none;ext-decoration: none;
+}}
 
     .company a:hover {
-        text-decoration: underline;
-    }
+        text-decoration: underline;       text-decoration: underline;
+    }    }
 
 .date {
-    color: var(--text-secondary);
+    color: var(--text-secondary);condary);
 }
 
 .details {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
+    color: var(--text-secondary); var(--text-secondary);
+    font-size: 0.875rem; 0.875rem;
 }
 
-.employment-type,
+.employment-type,.employment-type,
 .location,
 .description {
-    color: var(--text-secondary);
+    color: var(--text-secondary);condary);
 }
 
-/* Publications */
+/* Publications *//* Publications */
 .publication-item {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; 2rem;
     position: relative;
 }
 
-.publication-header {
-    display: flex;
-    justify-content: space-between;
+.publication-header {publication-header {
+    display: flex;    display: flex;
+    justify-content: space-between; space-between;
     align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 
-.publication-title {
-    color: var(--text-primary);
+.publication-title {.publication-title {
+    color: var(--text-primary);;
     text-decoration: none;
-    transition: color 0.2s;
-}
+    transition: color 0.2s;ransition: color 0.2s;
+}}
 
-    .publication-title:hover {
-        color: blue; /* Change color to blue on hover */
+    .publication-title:hover {r {
+        color: blue; /* Change color to blue on hover */hange color to blue on hover */
     }
 
-    .publication-title h3 {
-        font-size: 1.25rem;
-        font-weight: 500;
+    .publication-title h3 {-title h3 {
+        font-size: 1.25rem;rem;
+        font-weight: 500;ht: 500;
     }
 
 .external-link {
     position: absolute;
-    right: -2rem;
-    top: 0.25rem;
+    right: -2rem;   right: -2rem;
+    top: 0.25rem;    top: 0.25rem;
     opacity: 0;
-    color: var(--accent);
-    transition: opacity 0.2s;
-}
+    color: var(--accent);--accent);
+    transition: opacity 0.2s;   transition: opacity 0.2s;
+}}
 
-.publication-item:hover .external-link {
+.publication-item:hover .external-link {er .external-link {
     opacity: 1;
 }
 
-/* Certifications */
+/* Certifications *//* Certifications */
 .certification-item {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; 2rem;
     position: relative;
 }
 
-.certification-header {
-    display: flex;
-    justify-content: space-between;
+.certification-header {certification-header {
+    display: flex;    display: flex;
+    justify-content: space-between;pace-between;
     align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 
-.certification-title {
+.certification-title {.certification-title {
     color: var(--text-primary);
     text-decoration: none;
-    transition: color 0.2s;
-}
+    transition: color 0.2s;ransition: color 0.2s;
+}}
 
-    .certification-title:hover {
-        color: blue; /* Change color to blue on hover */
+    .certification-title:hover {ver {
+        color: blue; /* Change color to blue on hover */hange color to blue on hover */
     }
 
-    .certification-title h3 {
-        font-size: 1.25rem;
-        font-weight: 500;
+    .certification-title h3 {ion-title h3 {
+        font-size: 1.25rem;: 1.25rem;
+        font-weight: 500;;
     }
 
-/* Education */
+/* Education *//* Education */
 .education-item {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; 2rem;
     position: relative;
 }
 
-.education-header {
-    display: flex;
-    justify-content: space-between;
+.education-header {education-header {
+    display: flex;    display: flex;
+    justify-content: space-between;t: space-between;
     align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 
-.education-title {
-    color: var(--text-primary);
+.education-title {.education-title {
+    color: var(--text-primary);y);
     text-decoration: none;
-    transition: color 0.2s;
-}
+    transition: color 0.2s;ransition: color 0.2s;
+}}
 
-    .education-title:hover {
-        color: blue; /* Change color to blue on hover */
+    .education-title:hover {{
+        color: blue; /* Change color to blue on hover */hange color to blue on hover */
     }
 
     .education-title h3 {
-        font-size: 1.25rem;
-        font-weight: 500;
+        font-size: 1.25rem;ze: 1.25rem;
+        font-weight: 500;: 500;
     }
 
-/* Floating Navigation */
+/* Floating Navigation */gation */
 .floating-nav {
     display: block;
-    position: fixed;
+    position: fixed;d;
     top: 2rem;
     right: 2rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9);ba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;   padding: 1rem;
+    border-radius: 0.5rem;    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;ease;
 }
 
-    .floating-nav.hidden {
+    .floating-nav.hidden {en {
         opacity: 0;
-        pointer-events: none;
+        pointer-events: none;nts: none;
     }
 
-    .floating-nav ul {
-        list-style: none;
+    .floating-nav ul {    .floating-nav ul {
+        list-style: none;ne;
         padding: 0;
-        margin: 0;
-    }
+        margin: 0;   margin: 0;
+    }    }
 
     .floating-nav li {
         margin-bottom: 0.5rem;
     }
 
     .floating-nav a {
-        color: var(--text-secondary);
-        text-decoration: none;
-        font-size: 0.875rem;
+        color: var(--text-secondary);econdary);
+        text-decoration: none;   text-decoration: none;
+        font-size: 0.875rem;        font-size: 0.875rem;
         transition: color 0.2s;
         display: block;
-        padding: 0.25rem 0;
-    }
+        padding: 0.25rem 0;adding: 0.25rem 0;
+    }    }
 
         .floating-nav a:hover {
-            color: var(--accent);
+            color: var(--accent);nt);
         }
 
-        .floating-nav a.active {
-            color: var(--accent);
-            font-weight: 500;
+        .floating-nav a.active {ctive {
+            color: var(--accent);     color: var(--accent);
+            font-weight: 500;font-weight: 500;
         }
 
-/* Add IDs to sections */
+/* Add IDs to sections */o sections */
 #focus,
-#experience,
-#certifications,
+#experience,experience,
+#certifications,#certifications,
 #publications,
 #education {
-    scroll-margin-top: 2rem;
+    scroll-margin-top: 2rem;n-top: 2rem;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+/* Responsive design *//* Responsive design */
+@media (max-width: 768px) {dth: 768px) {
     .container {
-        flex-direction: column;
-    }
+        flex-direction: column;   flex-direction: column;
+    }    }
 
     .sidebar {
-        width: 100%;
-    }
+        width: 100%;   width: 100%;
+    }    }
 
     .main-content {
         padding: 2rem;
     }
 
-    .external-link {
+    .external-link {    .external-link {
         opacity: 1;
         position: static;
-        margin-left: 0.5rem;
-    }
+        margin-left: 0.5rem;   margin-left: 0.5rem;
+    }    }
 
     .floating-nav {
-        display: none; /* Hide navigation bar on mobile devices */
+        display: none; /* Hide navigation bar on mobile devices */es */
     }
 
-    .calendly-container {
-        margin-left: 0.5rem; /* Small margin to the left */
-        margin-right: 0.5rem; /* Small margin to the right */
-        width: calc(100% - 1rem); /* Adjust width to fit the screen */
-        height: 1200px; /* Adjust height for mobile devices as needed */
+    .calendly-container {calendly-container {
+        margin-left: 0.5rem; /* Small margin to the left */        margin-left: 0.5rem; /* Small margin to the left */
+        margin-right: 0.5rem; /* Small margin to the right */ /* Small margin to the right */
+        width: calc(100% - 1rem); /* Adjust width to fit the screen */en */
+        height: 1200px; /* Adjust height for mobile devices as needed */evices as needed */
     }
 
     .calendly-inline-widget {
         min-width: 100%; /* Ensure the widget takes full width */
-        height: 1000px; /* Adjust height as needed */
-    }
+        height: 1000px; /* Adjust height as needed */   height: 1000px; /* Adjust height as needed */
+    }    }
 
-    .profile-picture-container {
-        display: block; /* Nur in der mobilen Version anzeigen */
+    .profile-picture-container {    .profile-picture-container {
+        display: block; /* Nur in der mobilen Version anzeigen */on anzeigen */
     }
 
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {@media (min-width: 769px) and (max-width: 1200px) {
     section {
-        padding-right: 4rem; /* Moderate Padding für mittlere Bildschirme */
+        padding-right: 4rem; /* Moderate Padding fï¿½r mittlere Bildschirme */ng-right: 4rem; /* Moderate Padding fï¿½r mittlere Bildschirme */
     }
 }
 
-@media (min-width: 1201px) {
-    section {
-        padding-right: 6rem; /* Größere Padding für größere Bildschirme */
+@media (min-width: 1201px) {@media (min-width: 1201px) {
+
+
+
+
+
+}    }        padding-right: 6rem; /* Grï¿½ï¿½ere Padding fï¿½r grï¿½ï¿½ere Bildschirme */    section {    section {
+        padding-right: 6rem; /* Grï¿½ï¿½ere Padding fï¿½r grï¿½ï¿½ere Bildschirme */
     }
 }
