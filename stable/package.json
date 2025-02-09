@@ -17,7 +17,9 @@
     "lint:fix": "eslint . --fix",
     "local": "http-server",
     "build": "grunt build",
-    "save": "git add . && git commit -m 'update 0.2.3 stable' && git push origin webspace"
+    "stable": "cd ~/lebenslauf/stable",
+    "reset": "git reset --hard 059359b858775f9c7dfd9fe039440c93d72b45c2",
+    "reset-and-apply": "git stash && git reset --hard 059359b858775f9c7dfd9fe039440c93d72b45c2 && git stash apply"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,17 @@
+/* Profilbild als Hintergrund */
+.profile-picture-container {
+    display: none; /* Standardmäßig ausgeblendet */
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Vollbildhöhe */
+    background-size: cover; /* Bild vollständig abdecken */
+    background-position: center;
+    background-image: url('/public/images/profile-Sinowski.jpg');
+    transition: background 0.3s ease; /* Sanfter Übergang */
+}
+
+/* Überblenden zur Sidebar-Farbe */
+.scrolled .profile-picture-container {
+    background-image: none; /* Entfernt das Hintergrundbild */
+    background-color: var(--sidebar-bg); /* Setzt die Sidebar-Hintergrundfarbe */
+}
