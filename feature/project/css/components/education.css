@@ -1,0 +1,44 @@
+.education-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.education-title {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.education-title:hover {
+    color: var(--accent);
+}
+
+.education-title h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.education-title p {
+    color: var(--text-secondary);
+}
+
+.education-item .external-link {
+    position: absolute;
+    right: -2rem;
+    top: 0.25rem;
+    opacity: 0;
+    color: var(--accent);
+    transition: opacity 0.2s;
+}
+
+.education-item:hover .external-link {
+    opacity: 1;
+}

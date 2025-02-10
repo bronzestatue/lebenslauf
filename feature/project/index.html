@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constantin Sinowski</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Navigation -->
+        <nav class="floating-nav">
+            <ul>
+                <li><a href="#start">Start</a></li>
+                <li><a href="#focus">Fokus</a></li>
+                <li><a href="#appointment">Terminbuchung</a></li>
+                <li><a href="#certifications">Zertifizierungen</a></li>
+                <li><a href="#experiences">Erfahrung</a></li>
+                <li><a href="#publications">Veröffentlichungen</a></li>
+                <li><a href="#education">Studium</a></li>
+            </ul>
+        </nav>
+
+        <!-- Profile Picture -->
+        <section id="start" class="start-section">
+            <div class="profile-picture">
+                <div class="profile-overlay"></div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll down</span>
+                <i data-lucide="chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="header" id="sidebar-header">
+                    <h1>Constantin Sinowski</h1>
+                    <a href="#education" class="subtitle">
+                        <span>Bachelor of Engineering</span>
+                    </a>
+                </div>
+
+                <div class="sections">
+                    <div>
+                        <h2>Kontakt</h2>
+                        <div id="contact" class="contact-details">
+                            <a href="mailto:constantin@sinowski.de"
+                                class="contact-item"
+                                title="E-Mail senden">
+                                <i data-lucide="mail"></i>
+                                <span>constantin@sinowski.de</span>
+                            </a>
+                            <a href="#appointment"
+                                class="contact-item"
+                                title="Telefonnummer anzeigen">
+                                <i data-lucide="phone"></i>
+                                <span>+49 156 79001672</span>
+                            </a>
+                            <div class="contact-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Berlin, Deutschland</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Soziale Medien</h2>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/constantinsinowski/" class="social-link" title="LinkedIn Profil">
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/constantinsinowski/" class="social-link" title="Instagram Profil">
+                                <i data-lucide="instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Gehaltsvorstellung</h2>
+                        <p class="salary">60.000€</p>
+                        <p class="salary-note">Verhandelbar</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Current -->
+                <section id="focus">
+                    <div class="section-header">
+                        <h2><i data-lucide="target"></i> Fokus</h2>
+                    </div>
+                    <div>
+                        <p>Weiterbildung KI Masterclass Basic</p>
+                    </div>
+                </section>
+
+                <section id="appointment">
+                    <div class="section-header">
+                        <h2><i data-lucide="phone"></i> Terminbuchung</h2>
+                    </div>
+                    <div class="calendly-container">
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/constantinsinowski/telefonat"></div>
+                    </div>
+                </section>
+
+                <!-- Certification Items -->
+                <section id="certifications">
+                    <div class="section-header">
+                        <h2><i data-lucide="award"></i> Zertifizierungen</h2>
+                    </div>
+                    <div class="certification-items"></div>
+                </section>
+
+                <!-- Experience Items -->
+                <section id="experiences">
+                    <div class="section-header">
+                        <h2><i data-lucide="briefcase"></i> Professionelle Erfahrung</h2>
+                    </div>
+                    <div class="experience-items"></div>
+                </section>
+
+                <!-- Publication Items -->
+                <section id="publications">
+                    <div class="section-header">
+                        <h2><i data-lucide="book-open"></i> Veröffentlichungen</h2>
+                    </div>
+                    <div class="publication-items"></div>
+                </section>
+
+                <!-- Education Items -->
+                <section id="education">
+                    <div class="section-header">
+                        <h2><i data-lucide="book"></i> Studium</h2>
+                    </div>
+                    <div class="education-items"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

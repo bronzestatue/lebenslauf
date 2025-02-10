@@ -1,0 +1,9 @@
+export const education = [
+    {
+        title: "Wirtschaftsingenieurswesen Digital Engineering & Management",
+        degree: "Bachelor of Engineering",
+        institution: "Hochschule Fresenius",
+        graduation: "2024",
+        url: "https://www.fernstudium-fresenius.de/bachelor/wirtschaftsingenieurwesen-digital-engineering/"
+    }
+];

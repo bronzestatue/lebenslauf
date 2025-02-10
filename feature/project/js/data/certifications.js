@@ -1,0 +1,27 @@
+export const certifications = [
+    {
+        "title": "Analyze Data with SQL",
+        "issuer": "Codecademy",
+        "year": "2024",
+        "url": "https://www.codecademy.com/profiles/_cosinus/certificates/5cafb2d937090210d7df3652"
+    },
+    {
+        "title": "Bash Scripting",
+        "issuer": "Codecademy",
+        "year": "2024",
+        "url": "https://www.codecademy.com/profiles/_cosinus/certificates/37c55263a9f1b1f7603f7551c293ecbd"
+    },
+    {
+        "title": "BI Dashboards with Power BI",
+        "issuer": "Codecademy",
+        "year": "2023",
+        "url": "https://www.codecademy.com/profiles/constantinsinowski/certificates/1cb76ac48943853ca32c394afeb491c9"
+    },
+    {
+        "title": "KNIME L1",
+        "issuer": "KNIME",
+        "year": "2023",
+        "url": "https://www.credly.com/badges/891bf1ee-0b27-4b8d-945a-1a1587e1d36b/public_url"
+    }
+    // Add other certifications here...
+];

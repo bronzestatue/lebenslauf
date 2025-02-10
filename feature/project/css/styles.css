@@ -1,0 +1,98 @@
+/* Import base styles and components */
+@import 'base.css';
+@import 'components/start.css';
+@import 'components/profile.css';
+@import 'components/sidebar.css';
+@import 'components/navigation.css';
+@import 'components/calendly.css';
+@import 'components/experience.css';
+@import 'components/certifications.css';
+@import 'components/publications.css';
+@import 'components/education.css';
+
+/* Global styles */
+:root {
+    --primary-bg: #ffffff;
+    --sidebar-bg: #111827;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-light: #9ca3af;
+    --accent: #3b82f6;
+    --sidebar-width: 320px;
+    --sidebar-collapsed-width: 60px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Calibri", Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+/* Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Section styles */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.section-header i {
+    color: var(--accent);
+}
+
+/* Common item styles */
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.item-title {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.item-title:hover {
+    color: var(--accent);
+}
+
+.external-link {
+    position: absolute;
+    right: -2rem;
+    top: 0.25rem;
+    opacity: 0;
+    color: var(--accent);
+    transition: opacity 0.2s;
+}
+
+.item:hover .external-link {
+    opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}

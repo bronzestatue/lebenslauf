@@ -1,0 +1,39 @@
+.certification-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.certification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.certification-title {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.certification-title:hover {
+    color: var(--accent);
+}
+
+.certification-title h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.external-link {
+    position: absolute;
+    right: -2rem;
+    top: 0.25rem;
+    opacity: 0;
+    color: var(--accent);
+    transition: opacity 0.2s;
+}
+
+.certification-item:hover .external-link {
+    opacity: 1;
+}

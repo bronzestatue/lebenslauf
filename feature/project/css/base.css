@@ -1,0 +1,68 @@
+/* Base styles */
+:root {
+    --primary-bg: #ffffff;
+    --sidebar-bg: #111827;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-light: #9ca3af;
+    --accent: #3b82f6;
+    --sidebar-width: 320px;
+    --transition-speed: 0.3s;
+    --content-max-width: 48rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Main content layout */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    transition: margin-left var(--transition-speed) ease,
+                width var(--transition-speed) ease;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Section styles */
+section {
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+        width: 100%;
+    }
+}

@@ -1,0 +1,72 @@
+/* Profile picture styles */
+.profile-picture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://drive.google.com/uc?export=view&id=10X14B9phCgg9omXyVAnJOVBiyF0h059v");
+    background-image: url('../images/profile-Sinowski.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 2s ease-in-out, transform 1.5s ease-in-out;
+    will-change: transform, opacity;
+}
+
+.profile-picture.loaded {
+    opacity: 1;
+}
+
+.profile-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(17, 24, 39, 0.05) 50%,
+        rgba(17, 24, 39, 0.2) 100%
+    );
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.profile-picture.loaded .profile-overlay {
+    opacity: 1;
+}
+
+.profile-picture.behind-sidebar {
+    transform: scale(0.98);
+    opacity: 0.1;
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .profile-picture {
+        position: relative;
+        height: 100vh;
+        transform: translateY(0);
+        transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+    }
+    
+    .profile-picture.behind-sidebar {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    .profile-overlay {
+        background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(17, 24, 39, 0.1) 40%,
+            rgba(17, 24, 39, 0.3) 70%,
+            rgba(17, 24, 39, 0.5) 100%
+        );
+    }
+}
