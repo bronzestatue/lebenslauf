@@ -61,7 +61,7 @@ function App() {
               <h2 className="text-2xl font-semibold">Fokus</h2>
             </div>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Weiterbildung KI Masterclass Basic
+              Weiterbildung & Entwicklung
             </p>
           </section>
 
