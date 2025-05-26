@@ -46,7 +46,6 @@ function App() {
             <div>
               <h2 className="text-sm uppercase tracking-wider text-gray-400 mb-3">Gehaltsvorstellung</h2>
               <p className="text-gray-300">50.000€ - 60.000€</p>
-              <p className="text-sm text-gray-400 mt-1">Verhandelbar</p>
             </div>
           </div>
         </div>
@@ -189,6 +188,14 @@ Ein bedeutender Teil meiner Tätigkeit umfasste die Recherche und Dokumentation 
                     <ExternalLink className="w-5 h-5" />
                   </a>
                 </div>
+
+                <div className="group relative flex justify-between items-start">
+                  <div>
+                    <h3 className="text-xl font-medium">KI Spezialist</h3>
+                    <p className="text-gray-500 mt-1">KI Masterclass Basic, 2025</p>
+                  </div>
+                </div>
+                
               </div>
             </div>
           </section>
