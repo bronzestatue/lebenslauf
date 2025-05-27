@@ -34,8 +34,8 @@ const certifications = [
 
 // Function to create certification elements
 function createCertificationElement(cert) {
-    const div = document.createElement('div');
-    div.className = 'certification-item';
+    const div = document.createElement("div");
+    div.className = "certification-item";
     div.innerHTML = `
       <div class="group relative flex justify-between items-start">
         <div>
@@ -54,7 +54,7 @@ function createCertificationElement(cert) {
 
 // Load certifications
 function loadCertifications() {
-    const container = document.querySelector('.certification-items');
+    const container = document.querySelector(".certification-items");
     certifications.forEach(cert => {
         container.appendChild(createCertificationElement(cert));
     });

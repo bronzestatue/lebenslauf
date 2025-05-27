@@ -6,6 +6,7 @@
     --text-secondary: #4b5563;
     --text-light: #9ca3af;
     --accent: #3b82f6;
+    --sidebar-width: 320px; /* Define sidebar width */
 }
 
 * {
@@ -15,9 +16,11 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Calibri", Arial, sans-serif;
-    line-height: 1.5;
-    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Darker shade for better readability */
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
 }
 
 /* Profile background styles */
@@ -89,7 +92,7 @@ body {
 .sidebar {
     background-color: var(--sidebar-bg);
     color: white;
-    width: 320px;
+    width: var(--sidebar-width);
     padding: 2rem;
     margin-right: 2rem;
     position: fixed;
@@ -209,7 +212,7 @@ body {
     flex: 1;
     padding: 2rem 3rem;
     background-color: var(--primary-bg);
-    margin-left: 320px; /* Adjust margin to account for sidebar */
+    margin-left: var(--sidebar-width); /* Adjust margin to account for sidebar */
     transition: margin-left 0.3s ease, width 0.3s ease; /* Add transition for smooth animation */
     position: relative;
     z-index: 2;
@@ -222,6 +225,14 @@ body {
 /* Section styles */
 section {
     margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section-header {
@@ -264,6 +275,7 @@ section {
 .company a {
     color: var(--text-secondary);
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
     .company a:hover {
@@ -301,7 +313,7 @@ section {
 .publication-title {
     color: var(--text-primary);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.3s ease-in-out;
 }
 
     .publication-title:hover {
@@ -319,7 +331,7 @@ section {
     top: 0.25rem;
     opacity: 0;
     color: var(--accent);
-    transition: opacity 0.2s;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .publication-item:hover .external-link {
@@ -342,7 +354,7 @@ section {
 .certification-title {
     color: var(--text-primary);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.3s ease-in-out;
 }
 
     .certification-title:hover {
@@ -370,7 +382,7 @@ section {
 .education-title {
     color: var(--text-primary);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.3s ease-in-out;
 }
 
     .education-title:hover {
@@ -416,7 +428,7 @@ section {
         color: var(--text-secondary);
         text-decoration: none;
         font-size: 0.875rem;
-        transition: color 0.2s;
+        transition: color 0.3s ease-in-out;
         display: block;
         padding: 0.25rem 0;
     }
@@ -446,10 +458,13 @@ section {
 
     .sidebar {
         width: 100%;
+        position: static;
+        height: auto;
     }
 
     .main-content {
         padding: 2rem;
+        margin-left: 0;
     }
 
     .external-link {
@@ -502,7 +517,7 @@ section {
     border-radius: 0.25rem;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s ease;
 }
 
 .download-button:hover {

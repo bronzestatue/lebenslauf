@@ -498,6 +498,15 @@ window.addEventListener("scroll", () => {
     }
 });
 
+// Scroll animation trigger
+document.addEventListener("scroll", () => {
+    document.querySelectorAll(".section").forEach(section => {
+        if (section.getBoundingClientRect().top < window.innerHeight) {
+            section.classList.add("visible");
+        }
+    });
+});
+
 // Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   loadExperiences();
