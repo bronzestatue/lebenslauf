@@ -16,7 +16,8 @@ lucide.createIcons();
 function enableResumeDownload(pdfPath) {
     const downloadButton = document.getElementById("downloadResumeButton");
     if (downloadButton) {
-        downloadButton.addEventListener("click", () => {
+        downloadButton.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent default action
             // Check if the file exists by trying to fetch it first
             fetch(pdfPath, { method: "HEAD" })
                 .then(response => {
@@ -24,6 +25,7 @@ function enableResumeDownload(pdfPath) {
                         const link = document.createElement("a");
                         link.href = pdfPath;
                         link.download = "Lebenslauf_Sinowski.pdf";
+                        link.style.display = 'none'; // Hide the link
                         document.body.appendChild(link);
                         link.click();
                         document.body.removeChild(link);
