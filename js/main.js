@@ -504,7 +504,6 @@ document.addEventListener("DOMContentLoaded", () => {
   loadCertifications();
   loadPublications();
   loadEducation();
-  initFloatingNav();
   lucide.createIcons();
   enableResumeDownload("documents/Lebenslauf_Sinowski.pdf");
   console.log("Document loaded and functions initialized");
