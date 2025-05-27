@@ -590,3 +590,15 @@ section {
     position: relative;
     z-index: 2;
 }
+
+/* Focus link style */
+.focus-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.focus-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}

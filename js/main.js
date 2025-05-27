@@ -1,3 +1,4 @@
+import * as lucide from 'lucide';
 import { loadExperiences } from "./experience.js";
 import { loadCertifications } from "./certification.js";
 import { loadPublications } from "./publication.js";
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Log container status
         Object.entries(containers).forEach(([name, container]) => {
-            console.log(`${name} container ${container ? 'found' : 'not found'}`);
+            console.log(`${name} container ${container ? "found" : "not found"}`);
         });
 
         if (containers.experiences) await loadExperiences();

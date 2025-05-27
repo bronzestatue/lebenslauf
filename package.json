@@ -1,42 +1,20 @@
 {
   "name": "lebenslauf",
-  "version": "0.1.1",
-  "description": "updated structured data",
-  "main": "main.js",
-  "devDependencies": {
-    "eslint": "^9.19.0",
-    "grunt": "^1.6.1",
-    "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-contrib-uglify": "^5.2.2",
-    "grunt-contrib-watch": "^1.1.0"
-  },
+  "version": "1.0.0",
+  "description": "Personal Resume Website",
+  "main": "js/main.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "local": "http-server",
-    "build": "grunt build",
-    "save": "git add . && git commit -m 'update 0.2.3 stable' && git push origin webspace"
+    "install-deps": "npm install",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bronzestatue/lebenslauf.git"
-  },
-  "keywords": [
-    "webspace",
-    "test"
-  ],
-  "author": "CS",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bronzestatue/lebenslauf/issues"
-  },
-  "homepage": "https://github.com/bronzestatue/lebenslauf#readme",
   "dependencies": {
-    "@types/react": "^19.1.6",
-    "express": "^4.21.2",
-    "lucide-react": "^0.511.0",
-    "react": "^19.1.0"
+    "lucide": "^0.263.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "rollup": "^3.25.0"
   }
 }
