@@ -90,7 +90,7 @@ function createExperienceElement(experience) {
 // Load experiences
 async function loadExperiences() {
     console.log("loadExperiences function called");
-    const container = document.querySelector(".experience-items");
+    const container = document.querySelector("#erfahrung");
     
     if (!container) {
         console.error("Experience container not found");
@@ -107,7 +107,8 @@ async function loadExperiences() {
         });
         
         // Make sections visible after loading
-        container.querySelectorAll(".section").forEach(section => {
+        const sections = container.querySelectorAll(".section");
+        sections.forEach(section => {
             section.classList.add("visible");
         });
         console.log("All experiences loaded and visible");

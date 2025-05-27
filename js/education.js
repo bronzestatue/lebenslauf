@@ -35,7 +35,7 @@ function createEducationElement(edu) {
 // Load education
 async function loadEducation() {
     console.log("loadEducation function called");
-    const container = document.querySelector(".education-items");
+    const container = document.querySelector("#studium");
     if (container) {
         console.log("Education container found");
         console.log("Education data:", education); // Log the data

@@ -49,7 +49,7 @@ function createCertificationElement(cert) {
 // Load certifications
 async function loadCertifications() {
     console.log("loadCertifications function called");
-    const container = document.querySelector(".certification-items");
+    const container = document.querySelector("#zertifizierungen");
     if (container) {
         console.log("Certification container found");
         console.log("Certifications data:", certifications); // Log the data

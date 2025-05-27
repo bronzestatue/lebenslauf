@@ -1,4 +1,9 @@
 import { createIcons } from "lucide";
+import { loadExperiences } from "./experience.js";
+import { loadCertifications } from "./certification.js";
+import { loadPublications } from "./publication.js";
+import { loadEducation } from "./education.js";
+import { loadFocus } from "./focus.js";
 
 // Initialize Lucide icons
 createIcons();
@@ -64,20 +69,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("DOMContentLoaded event fired");
 
     try {
-        // Dynamically import modules
-        console.log("Importing modules...");
-        const experienceModule = await import("./experience.js");
-        console.log("Experience module imported");
-        const certificationModule = await import("./certification.js");
-        console.log("Certification module imported");
-        const publicationModule = await import("./publication.js");
-        console.log("Publication module imported");
-        const educationModule = await import("./education.js");
-        console.log("Education module imported");
-        const focusModule = await import("./focus.js");
-        console.log("Focus module imported");
-
-        // Check containers and load content
+        // Check if containers exist before loading
+        console.log("Checking containers...");
         const containers = {
             experiences: document.querySelector(".experience-items"),
             certifications: document.querySelector(".certification-items"),
@@ -91,35 +84,17 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log(`${name} container ${container ? "found" : "not found"}`);
         });
 
-        if (containers.experiences) {
-            console.log("Loading experiences...");
-            await experienceModule.loadExperiences();
-            console.log("Experiences loaded");
-        }
-
-        if (containers.certifications) {
-            console.log("Loading certifications...");
-            await certificationModule.loadCertifications();
-            console.log("Certifications loaded");
-        }
-
-        if (containers.publications) {
-            console.log("Loading publications...");
-            await publicationModule.loadPublications();
-            console.log("Publications loaded");
-        }
-
-        if (containers.education) {
-            console.log("Loading education...");
-            await educationModule.loadEducation();
-            console.log("Education loaded");
-        }
-
-        if (containers.focus) {
-            console.log("Loading focus...");
-            await focusModule.loadFocus();
-            console.log("Focus loaded");
-        }
+        console.log("Loading modules...");
+        loadExperiences();
+        console.log("Experiences loaded");
+        loadCertifications();
+        console.log("Certifications loaded");
+        loadPublications();
+        console.log("Publications loaded");
+        loadEducation();
+        console.log("Education loaded");
+        loadFocus();
+        console.log("Focus loaded");
 
         // Reinitialize icons after insertion
         createIcons();

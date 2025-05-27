@@ -1,11 +1,11 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 
 export default {
-  input: 'js/main.js',
+  input: "js/main.js",
   output: {
-    file: 'dist/js/bundle.js',
-    format: 'es',
+    dir: "dist/js", // <-- use dir instead of file
+    format: "es",
     sourcemap: true
   },
   plugins: [
