@@ -34,10 +34,18 @@ function createEducationElement(edu) {
 
 // Load education
 function loadEducation() {
+    console.log("loadEducation function called");
     const container = document.querySelector(".education-items");
-    education.forEach(edu => {
-      container.appendChild(createEducationElement(edu));
-    });
+    if (container) {
+        console.log("Education container found");
+        education.forEach(edu => {
+            const element = createEducationElement(edu);
+            container.appendChild(element);
+            console.log("Appended education:", edu.title);
+        });
+    } else {
+        console.error("Education container not found");
+    }
 }
 
 export { loadEducation };
