@@ -20,12 +20,6 @@ const certifications = [
     },
     {
         title: "BI Dashboards with Power BI",
-        issuer: "Codecademy",
-        year: "2023",
-        url: "https://www.codecademy.com/profiles/constantinsinowski/certificates/1cb76ac48943853ca32c394afeb491c9"
-    },
-    {
-        title: "KNIME L1",
         issuer: "KNIME",
         year: "2023",
         url: "https://www.credly.com/badges/891bf1ee-0b27-4b8d-945a-1a1587e1d36b/public_url"
@@ -35,7 +29,7 @@ const certifications = [
 // Function to create certification elements
 function createCertificationElement(cert) {
     const div = document.createElement("div");
-    div.className = "certification-item";
+    div.className = "certification-item section";
     div.innerHTML = `
       <div class="group relative flex justify-between items-start">
         <div>
@@ -58,8 +52,6 @@ function loadCertifications() {
     certifications.forEach(cert => {
         container.appendChild(createCertificationElement(cert));
     });
-    // Reinitialize icons for newly added elements
-    lucide.createIcons();
 }
 
 export { loadCertifications };

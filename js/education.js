@@ -12,7 +12,7 @@ const education = [
 // Function to create education elements
 function createEducationElement(edu) {
     const div = document.createElement("div");
-    div.className = "education-item";
+    div.className = "education-item section";
     
     div.innerHTML = `
       <div class="education-header">
@@ -38,8 +38,6 @@ function loadEducation() {
     education.forEach(edu => {
       container.appendChild(createEducationElement(edu));
     });
-    // Reinitialize icons for newly added elements
-    lucide.createIcons();
 }
 
 export { loadEducation };

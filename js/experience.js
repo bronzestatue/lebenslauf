@@ -37,7 +37,6 @@ const experiences = [
         endDate: "06.2022",
         employmentType: "Projekt",
         location: "Berlin",
-        companyLink: "https://www.sasserath-munzinger.de/",
         description: "Im Rahmen meiner Tätigkeit als Datenanalyst habe ich ein umfangreiches Projekt durchgeführt, das die Auslese und Analyse von Umfragedaten zur Meinung über europäische Fußballvereine umfasste. Diese Arbeit bot mir die Möglichkeit, meine Fähigkeiten in der Datenverarbeitung, Analyse und Präsentation zu vertiefen und zu erweitern. Das Projekt begann mit der Auslese von Daten aus einer umfangreichen Umfrage, an der 1000 Personen teilnahmen. Die Umfrage zielte darauf ab, die Meinungen der Befragten zu verschiedenen Aspekten europäischer Fußballvereine zu erfassen, darunter Innovation, Nachhaltigkeit, soziale Verantwortung und wirtschaftliche Kompetenz. Die Daten wurden mit der Software SPSS (Statistical Package for the Social Sciences) extrahiert. SPSS ermöglichte es mir, die rohen Umfragedaten zu bereinigen, fehlende Werte zu identifizieren und notwendige Transformationen vorzunehmen, um die Daten für die Analyse in Excel vorzubereiten. Nachdem die Daten aus SPSS extrahiert und aufbereitet waren, wurden sie in Excel importiert, um eine detaillierte Analyse durchzuführen. In Excel nutzte ich verschiedene Analysetechniken, darunter Pivot-Tabellen und Diagramme, um die Meinungen der Befragten zu den verschiedenen Aspekten der Fußballvereine zu visualisieren. Besondere Aufmerksamkeit galt dabei der Auswahl geeigneter Formatierungen für Diagramme, um die Ergebnisse klar und aussagekräftig darzustellen. Ein entscheidender Teil des Projekts war die Erstellung einer professionellen PowerPoint-Präsentation, in der die Ergebnisse der Analyse anschaulich dargestellt wurden. Jedes Diagramm wurde sorgfältig formatiert und mit den entsprechenden Logos der Fußballvereine versehen, um eine visuell ansprechende und leicht verständliche Präsentation zu gewährleisten. Die Präsentation umfasste nicht nur die grafischen Darstellungen der Ergebnisse, sondern auch erklärende Texte, die die wichtigsten Erkenntnisse und deren Bedeutung erläuterten."
     },
     {
@@ -47,7 +46,6 @@ const experiences = [
         endDate: "08.2019",
         employmentType: "Teilzeit",
         location: "Hamburg",
-        companyLink: "https://www.havi.com/",
         description: "Ein wesentlicher Teil meiner Arbeit war die Datenbankmigration und -analyse von Archiven mithilfe von Bash, Perl und Java. Ich entwickelte Skripte zur Automatisierung von Datenmigrationen, um den Transfer großer Datenmengen zwischen verschiedenen Systemen effizient und fehlerfrei zu gestalten. Außerdem analysierte ich die migrierten Daten, um sicherzustellen, dass sie korrekt und vollständig übertragen wurden. Ich war an der Entwicklung eines Programms in Java beteiligt, das nach den Prinzipien von Scrum und unter Verwendung von Git als Versionskontrollsystem entwickelt wurde. In diesem Projekt arbeitete ich eng mit dem Entwicklungsteam zusammen, um Anforderungen zu spezifizieren, Features zu implementieren und regelmäßig Fortschritte zu präsentieren. Die Arbeit in einem agilen Umfeld ermöglichte es mir, flexibel auf Änderungen zu reagieren und kontinuierlich Verbesserungen einzubringen. Zusätzlich erstellte ich Konzepte im Projektmanagement für interne Dokumente. Eine zentrale Aufgabe war die Entwicklung eines Verfahrens, das es ermöglichte, Datenabgleiche in mehreren Microsoft Word-Dokumenten durchzuführen. Hierbei wurden Platzhalter für Textfelder mit den Namen der Projektverantwortlichen durch eine zentrale Microsoft Excel-Tabelle gefüllt. Dieses System verbesserte die Konsistenz und Aktualität der Dokumentation und vereinfachte die Verwaltung von Projektdokumenten erheblich. Ein bedeutender Teil meiner Tätigkeit umfasste die Recherche und Dokumentation zu modernen Technologien im Bereich Cloud Computing und Containerisierung. Ich untersuchte Cloud-Dienste wie AWS und d.velop sowie Container-Technologien wie Docker und Kubernetes. Meine Recherche konzentrierte sich darauf, wie eine Virtual Private Cloud (VPC) mit VPN, SSL, Firewall und Lambda-Funktionen eingerichtet und verwaltet werden kann. Die Ergebnisse meiner Recherche wurden in detaillierten Dokumentationen festgehalten, die als Leitfaden für zukünftige Implementierungen dienten."
     },
     {
@@ -57,7 +55,6 @@ const experiences = [
         endDate: "06.2018",
         employmentType: "Teilzeit",
         location: "Hamburg",
-        companyLink: "https://www.motion-fashion.com/",
         description: "Ein zentraler Teil meiner Arbeit war der Export von Daten aus dem systeminternen proMO-System in das SAP XML-Format. Dieser Prozess umfasste mehrere Schritte, darunter die Extraktion relevanter Daten aus proMO, die Transformation dieser Daten in das XML-Format und die anschließende Integration in das SAP-System. Durch diese Arbeit konnte ich sicherstellen, dass die Daten nahtlos zwischen den Systemen übertragen wurden, was die Effizienz der Datenverarbeitung und -analyse erheblich steigerte. Ein weiteres bedeutendes Projekt war die Integration von Google Maps in die Präsentationsseite der Firma.Ziel war es, eine interaktive Karte mit Standortkennungen und Marktübersichten zu erstellen, die den Nutzern eine einfache und visuell ansprechende Möglichkeit bot, Informationen über die verschiedenen Standorte und Märkte des Unternehmens zu erhalten.Ich war für die Implementierung der Google Maps API verantwortlich, die es ermöglichte, Standorte dynamisch zu kennzeichnen und zusätzliche Informationen anzuzeigen.Diese Integration erleichterte den Nutzern den Zugriff auf wichtige Standortdaten und verbesserte die Benutzerfreundlichkeit der Präsentationsseite erheblich. Im Bereich des Produktinformationsmanagements(PIM) war ich für die Verwaltung und Optimierung der Produktdaten verantwortlich.Dies umfasste die Erfassung, Speicherung und Pflege von Produktinformationen, um sicherzustellen, dass alle Daten aktuell und genau waren.Ich entwickelte und implementierte Prozesse zur Konsolidierung und Standardisierung der Produktinformationen, die es dem Unternehmen ermöglichten, konsistente und verlässliche Daten für Marketing, Vertrieb und Kundensupport bereitzustellen.Durch die Einführung automatisierter Workflows und Validierungsregeln konnte ich die Effizienz des Produktinformationsmanagements weiter verbessern und die Fehlerquote bei der Datenerfassung reduzieren."
     },
     {
@@ -67,14 +64,13 @@ const experiences = [
         endDate: "06.2013",
         employmentType: "Vollzeit",
         location: "Melbourne",
-        companyLink: " ",
         description: "Unser Hauptfokus lag auf dem Vertrieb und der Installation von Energiesparleisten, die speziell dafür entwickelt wurden, den Standby-Modus von Fernsehern zu erkennen und den unnötigen Energieverbrauch zu verhindern. Diese Technologie ermöglichte es den Haushalten, ihre Energiekosten erheblich zu senken. Mein Team und ich führten umfassende Beratungen durch, um den Kunden den Nutzen und die Funktionsweise der Energiesparleisten zu erklären. Wir übernahmen auch die Installation vor Ort und stellten sicher, dass die Geräte ordnungsgemäß funktionierten. Das Projekt wurde im Auftrag der australischen Regierung, Energieversorgern und durch steuerliche Anreize finanziert. Diese Zusammenarbeit ermöglichte es uns, die Energiesparleisten zu subventionierten Preisen anzubieten und eine breite Akzeptanz bei den Verbrauchern zu erzielen. Ich koordinierte die Zusammenarbeit mit den beteiligten Partnern und stellte sicher, dass alle vertraglichen Verpflichtungen erfüllt wurden. Die Finanzierung des Projekts durch staatliche Stellen und Energieversorger unterstrich die Bedeutung und den Nutzen der Energiespartechnologie. Als Teamleiter war ich verantwortlich für die Leitung und Motivation eines 12 Personen starken Verkaufsteams. Ich implementierte effektive Verkaufsstrategien, um die Fähigkeiten und das Wissen meines Teams kontinuierlich zu verbessern. Durch regelmäßige Meetings, klare Zielsetzungen und Feedbackrunden konnte ich eine positive und produktive Arbeitsatmosphäre schaffen. Diese Maßnahmen führten dazu, dass unser Team eine Installationseffizienz von 70% über dem Durchschnitt von 10 Installationen pro Tag erreichte."
     }
 ];
 
 function createExperienceElement(experience) {
     const div = document.createElement("div");
-    div.className = "experience-item";
+    div.className = "experience-item section";
 
     div.innerHTML = `
     <div class="experience-header">
@@ -97,8 +93,6 @@ function loadExperiences() {
     experiences.forEach(exp => {
         container.appendChild(createExperienceElement(exp));
     });
-    // Reinitialize icons for newly added elements
-    lucide.createIcons();
 }
 
 export { loadExperiences };
