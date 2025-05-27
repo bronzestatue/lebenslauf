@@ -33,7 +33,7 @@ function createEducationElement(edu) {
 }
 
 // Load education
-function loadEducation() {
+async function loadEducation() {
     console.log("loadEducation function called");
     const container = document.querySelector(".education-items");
     if (container) {

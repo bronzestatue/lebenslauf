@@ -47,7 +47,7 @@ function createCertificationElement(cert) {
 }
 
 // Load certifications
-function loadCertifications() {
+async function loadCertifications() {
     console.log("loadCertifications function called");
     const container = document.querySelector(".certification-items");
     if (container) {

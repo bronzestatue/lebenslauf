@@ -105,8 +105,8 @@ async function loadExperiences() {
         });
         
         // Make sections visible after loading
-        container.querySelectorAll('.section').forEach(section => {
-            section.classList.add('visible');
+        container.querySelectorAll(".section").forEach(section => {
+            section.classList.add("visible");
         });
     } catch (error) {
         console.error("Error loading experiences:", error);

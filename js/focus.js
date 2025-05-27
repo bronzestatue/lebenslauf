@@ -1,4 +1,5 @@
 function loadFocus() {
+    console.log("loadFocus function called");
     const focusItems = [
         {
             title: "Weiterbildung",
@@ -9,6 +10,7 @@ function loadFocus() {
     const focusItemsContainer = document.querySelector(".focus-items");
 
     if (focusItemsContainer) {
+        console.log("Focus container found");
         focusItems.forEach(item => {
             const focusItemDiv = document.createElement("div");
             focusItemDiv.classList.add("focus-item");
@@ -23,6 +25,7 @@ function loadFocus() {
             focusItemDiv.appendChild(descriptionElement);
 
             focusItemsContainer.appendChild(focusItemDiv);
+            console.log("Appended focus item:", item.title);
         });
     } else {
         console.error("Focus container not found");
