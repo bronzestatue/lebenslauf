@@ -52,6 +52,7 @@ async function loadCertifications() {
     const container = document.querySelector(".certification-items");
     if (container) {
         console.log("Certification container found");
+        console.log("Certifications data:", certifications); // Log the data
         certifications.forEach(cert => {
             const element = createCertificationElement(cert);
             container.appendChild(element);

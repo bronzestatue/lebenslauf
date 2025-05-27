@@ -11,6 +11,7 @@ function loadFocus() {
 
     if (focusItemsContainer) {
         console.log("Focus container found");
+        console.log("Focus data:", focusItems); // Log the data
         focusItems.forEach(item => {
             const focusItemDiv = document.createElement("div");
             focusItemDiv.classList.add("focus-item");

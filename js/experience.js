@@ -98,16 +98,19 @@ async function loadExperiences() {
     }
     
     try {
+        console.log("Experiences data:", experiences); // Log the data
         experiences.forEach(exp => {
             const element = createExperienceElement(exp);
+            console.log("Created experience element:", element); // Log the created element
             container.appendChild(element);
-            console.log("Added experience:", exp.title);
+            console.log("Appended experience:", exp.title);
         });
         
         // Make sections visible after loading
         container.querySelectorAll(".section").forEach(section => {
             section.classList.add("visible");
         });
+        console.log("All experiences loaded and visible");
     } catch (error) {
         console.error("Error loading experiences:", error);
     }

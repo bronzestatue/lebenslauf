@@ -38,6 +38,7 @@ async function loadEducation() {
     const container = document.querySelector(".education-items");
     if (container) {
         console.log("Education container found");
+        console.log("Education data:", education); // Log the data
         education.forEach(edu => {
             const element = createEducationElement(edu);
             container.appendChild(element);
