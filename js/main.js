@@ -14,30 +14,26 @@ lucide.createIcons();
  * @param {string} pdfPath - The path to the PDF resume file.
  */
 function enableResumeDownload(pdfPath) {
-    // Get the download button element
     const downloadButton = document.getElementById("downloadResumeButton");
-
-    // Check if the download button exists
     if (downloadButton) {
-        // Add a click event listener to the download button
         downloadButton.addEventListener("click", () => {
-            // Create a new link element
-            const link = document.createElement("a");
-
-            // Set the href attribute to the PDF path
-            link.href = pdfPath;
-
-            // Set the download attribute to specify the filename
-            link.download = "documents/Lebenslauf_Sinowski.pdf";
-
-            // Append the link to the document
-            document.body.appendChild(link);
-
-            // Programmatically click the link to trigger the download
-            link.click();
-
-            // Remove the link from the document
-            document.body.removeChild(link);
+            // Check if the file exists by trying to fetch it first
+            fetch(pdfPath, { method: "HEAD" })
+                .then(response => {
+                    if (response.ok) {
+                        const link = document.createElement("a");
+                        link.href = pdfPath;
+                        link.download = "Lebenslauf_Sinowski.pdf";
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    } else {
+                        alert("Die PDF-Datei konnte nicht gefunden werden.");
+                    }
+                })
+                .catch(() => {
+                    alert("Die PDF-Datei konnte nicht gefunden werden.");
+                });
         });
     } else {
         console.error("Download button not found. Please ensure the element with id 'downloadResumeButton' exists in the HTML.");
@@ -67,12 +63,18 @@ document.addEventListener("scroll", () => {
 
 // Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  loadExperiences();
-  loadCertifications();
-  loadPublications();
-  loadEducation();
-  loadFocus();
-  lucide.createIcons();
-  enableResumeDownload("documents/Lebenslauf_Sinowski.pdf");
-  console.log("Document loaded and functions initialized");
+    // Defensive: check containers exist before loading
+    if (document.querySelector(".experience-items")) loadExperiences();
+    else console.error("Container .experience-items not found");
+    if (document.querySelector(".certification-items")) loadCertifications();
+    else console.error("Container .certification-items not found");
+    if (document.querySelector(".publication-items")) loadPublications();
+    else console.error("Container .publication-items not found");
+    if (document.querySelector(".education-items")) loadEducation();
+    else console.error("Container .education-items not found");
+    if (document.querySelector(".focus-items")) loadFocus();
+    else console.error("Container .focus-items not found");
+    lucide.createIcons();
+    enableResumeDownload("documents/Lebenslauf_Sinowski.pdf");
+    console.log("Document loaded and functions initialized");
 });
