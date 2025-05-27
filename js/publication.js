@@ -98,40 +98,37 @@ const publications = [
 // Function to create publication elements
 function createPublicationElement(pub) {
     const div = document.createElement("div");
-    div.className = "publication-item";
+    div.className = "publication-item section";
     
     div.innerHTML = `
-      <div class="publication-header">
-        <div>
-          <a href="${pub.url}" class="publication-title">
-            <h3>${pub.title}</h3>
-          </a>
-          <p class="date">${pub.publisher}, ${pub.year}</p>
+        <div class="publication-header">
+            <div>
+                <a href="${pub.url}" class="publication-title">
+                    <h3>${pub.title}</h3>
+                </a>
+                <p class="date">${pub.publisher}, ${pub.year}</p>
+            </div>
+            <a href="${pub.url}" class="external-link" aria-label="External link to publication">
+                <i data-lucide="external-link"></i>
+            </a>
         </div>
-        <a href="${pub.url}" class="external-link" aria-label="External link to publication">
-          <i data-lucide="external-link"></i>
-        </a>
-      </div>
-      <p class="description">${pub.description}</p>
+        <p class="description">${pub.description}</p>
     `;
     
     return div;
-  }
-
-  // Load publications
-function loadPublications() {
-    console.log("loadPublications function called");
-    const container = document.querySelector(".publication-items");
-    if (container) {
-        console.log("Publication container found");
-        publications.forEach(pub => {
-            const element = createPublicationElement(pub);
-            container.appendChild(element);
-             console.log("Appended publication:", pub.title);
-        });
-    } else {
-        console.error("Publication container not found");
-    }
 }
 
-export { loadPublications };
+// Load publications
+export function loadPublications() {
+    console.log("loadPublications called");
+    const container = document.querySelector(".publication-items");
+    if (!container) {
+        console.error("Publications container not found");
+        return;
+    }
+    
+    publications.forEach(pub => {
+        container.appendChild(createPublicationElement(pub));
+        console.log("Added publication:", pub.title);
+    });
+}

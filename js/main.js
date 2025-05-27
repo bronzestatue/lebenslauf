@@ -1,9 +1,4 @@
 import * as lucide from 'lucide';
-import { loadExperiences } from "./experience.js";
-import { loadCertifications } from "./certification.js";
-import { loadPublications } from "./publication.js";
-import { loadEducation } from "./education.js";
-import { loadFocus } from "./focus.js";
 
 // Initialize Lucide icons
 lucide.createIcons();
@@ -69,26 +64,45 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("DOMContentLoaded event fired");
 
     try {
-        // Check if containers exist before loading
-        const containers = {
-            experiences: document.querySelector(".experience-items"),
-            certifications: document.querySelector(".certification-items"),
-            publications: document.querySelector(".publication-items"),
-            education: document.querySelector(".education-items"),
-            focus: document.querySelector(".focus-items")
-        };
+        // Dynamically import modules
+        const experienceModule = await import('./experience.js');
+        const certificationModule = await import('./certification.js');
+        const publicationModule = await import('./publication.js');
+        const educationModule = await import('./education.js');
+        const focusModule = await import('./focus.js');
 
-        // Log container status
-        Object.entries(containers).forEach(([name, container]) => {
-            console.log(`${name} container ${container ? "found" : "not found"}`);
-        });
+        // Check containers and load content
+        const experienceContainer = document.querySelector(".experience-items");
+        if (experienceContainer) {
+            await experienceModule.loadExperiences();
+            console.log("Experiences loaded");
+        }
 
-        if (containers.experiences) await loadExperiences();
-        if (containers.certifications) await loadCertifications();
-        if (containers.publications) await loadPublications();
-        if (containers.education) await loadEducation();
-        if (containers.focus) await loadFocus();
+        const certificationContainer = document.querySelector(".certification-items");
+        if (certificationContainer) {
+            await certificationModule.loadCertifications();
+            console.log("Certifications loaded");
+        }
 
+        const publicationContainer = document.querySelector(".publication-items");
+        if (publicationContainer) {
+            await publicationModule.loadPublications();
+            console.log("Publications loaded");
+        }
+
+        const educationContainer = document.querySelector(".education-items");
+        if (educationContainer) {
+            await educationModule.loadEducation();
+            console.log("Education loaded");
+        }
+
+        const focusContainer = document.querySelector(".focus-items");
+        if (focusContainer) {
+            await focusModule.loadFocus();
+            console.log("Focus loaded");
+        }
+
+        // Initialize icons after content is loaded
         lucide.createIcons();
         enableResumeDownload("documents/Lebenslauf_Sinowski.pdf");
         console.log("All sections loaded successfully");
