@@ -61,86 +61,13 @@ document.addEventListener("scroll", () => {
     });
 });
 
-// Utility: Show loading spinner
-function showLoading(container) {
-    container.innerHTML = `<div class="spinner"></div>`;
-}
-
-// Utility: Show error message
-function showError(container, msg = "Fehler beim Laden der Daten.") {
-    container.innerHTML = `<p class="error-message">${msg}</p>`;
-}
-
-// Generic loader for JSON data
-async function loadData(file, containerSelector, renderFn) {
-    const container = document.querySelector(containerSelector);
-    if (!container) return;
-    showLoading(container);
-    try {
-        // Ensure the fetch path is correct for the data folder
-        const response = await fetch(`data/${file}`);
-        if (!response.ok) throw new Error(`Failed to load ${file}`);
-        const data = await response.json();
-        container.innerHTML = data.map(renderFn).join('');
-    } catch (error) {
-        console.error(error);
-        showError(container);
-    }
-}
-
-// Renderers
-function renderCertification(cert) {
-    return `
-        <div class="certification-item data-entry">
-            <h3>${cert.title}</h3>
-            <p>${cert.issuer} &bull; ${cert.year}</p>
-        </div>
-    `;
-}
-function renderExperience(exp) {
-    return `
-        <div class="experience-item data-entry">
-            <h3>${exp.title}</h3>
-            <p><strong>${exp.company}</strong> &bull; ${exp.location} &bull; ${exp.startDate} - ${exp.endDate}</p>
-            <p>${exp.description}</p>
-        </div>
-    `;
-}
-function renderPublication(pub) {
-    return `
-        <div class="publication-item data-entry">
-            <h3>${pub.title}</h3>
-            <p>${pub.publisher} &bull; ${pub.year}</p>
-            <p>${pub.description || ''}</p>
-        </div>
-    `;
-}
-
-// Calendly fallback
-function setupCalendlyFallback() {
-    const calendlyContainer = document.querySelector('.calendly-container');
-    if (!calendlyContainer) return;
-    // Add fallback link below the widget
-    const fallback = document.createElement('p');
-    fallback.innerHTML = `Falls das Buchungstool nicht lädt, klicken Sie <a href="https://calendly.com/constantinsinowski/telefonat" target="_blank">hier</a> zur Terminbuchung.`;
-    calendlyContainer.appendChild(fallback);
-}
-
 // Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-    // Dynamically load data from JSON files in the data folder
-    loadData('certifications.json', '.certification-items', renderCertification);
-    loadData('experience.json', '.experience-items', renderExperience);
-    loadData('publications.json', '.publication-items', renderPublication);
-
-    // Calendly fallback
-    setupCalendlyFallback();
-
-    // Defensive: check containers exist before loading
-    if (document.querySelector(".education-items")) loadEducation();
-    else console.error("Container .education-items not found");
-    if (document.querySelector(".focus-items")) loadFocus();
-    else console.error("Container .focus-items not found");
+    loadExperiences();
+    loadCertifications();
+    loadPublications();
+    loadEducation();
+    loadFocus();
     lucide.createIcons();
     enableResumeDownload("documents/Lebenslauf_Sinowski.pdf");
     console.log("Document loaded and functions initialized");
