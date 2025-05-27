@@ -1,7 +1,7 @@
-import * as lucide from "lucide";
+import { createIcons } from "lucide";
 
 // Initialize Lucide icons
-lucide.createIcons();
+createIcons();
 
 // PDF Download functionality
 /**
@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         const experienceModule = await import("./experience.js");
         console.log("Experience module imported");
         const certificationModule = await import("./certification.js");
-         console.log("certification module imported");
+        console.log("Certification module imported");
         const publicationModule = await import("./publication.js");
-        console.log("publication module imported");
+        console.log("Publication module imported");
         const educationModule = await import("./education.js");
-        console.log("education module imported");
+        console.log("Education module imported");
         const focusModule = await import("./focus.js");
-        console.log("focus module imported");
+        console.log("Focus module imported");
 
         // Check containers and load content
         const containers = {
@@ -121,8 +121,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log("Focus loaded");
         }
 
-        // Initialize icons after content is loaded
-        lucide.createIcons();
+        // Reinitialize icons after insertion
+        createIcons();
         enableResumeDownload("documents/Lebenslauf_Sinowski.pdf");
         console.log("All sections loaded successfully");
     } catch (error) {
