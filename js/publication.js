@@ -120,12 +120,18 @@ function createPublicationElement(pub) {
 
   // Load publications
 function loadPublications() {
+    console.log("loadPublications function called");
     const container = document.querySelector(".publication-items");
-    publications.forEach(pub => {
-      container.appendChild(createPublicationElement(pub));
-    });
-    // Reinitialize icons for newly added elements
-    lucide.createIcons();
-  }
+    if (container) {
+        console.log("Publication container found");
+        publications.forEach(pub => {
+            const element = createPublicationElement(pub);
+            container.appendChild(element);
+             console.log("Appended publication:", pub.title);
+        });
+    } else {
+        console.error("Publication container not found");
+    }
+}
 
 export { loadPublications };

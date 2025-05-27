@@ -89,10 +89,18 @@ function createExperienceElement(experience) {
 
 // Load experiences
 function loadExperiences() {
+    console.log("loadExperiences function called");
     const container = document.querySelector(".experience-items");
-    experiences.forEach(exp => {
-        container.appendChild(createExperienceElement(exp));
-    });
+    if (container) {
+        console.log("Experience container found");
+        experiences.forEach(exp => {
+            const element = createExperienceElement(exp);
+            container.appendChild(element);
+            console.log("Appended experience:", exp.title);
+        });
+    } else {
+        console.error("Experience container not found");
+    }
 }
 
 export { loadExperiences };

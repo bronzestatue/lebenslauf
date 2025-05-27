@@ -48,10 +48,18 @@ function createCertificationElement(cert) {
 
 // Load certifications
 function loadCertifications() {
+    console.log("loadCertifications function called");
     const container = document.querySelector(".certification-items");
-    certifications.forEach(cert => {
-        container.appendChild(createCertificationElement(cert));
-    });
+    if (container) {
+        console.log("Certification container found");
+        certifications.forEach(cert => {
+            const element = createCertificationElement(cert);
+            container.appendChild(element);
+            console.log("Appended certification:", cert.title);
+        });
+    } else {
+        console.error("Certification container not found");
+    }
 }
 
 export { loadCertifications };

@@ -53,7 +53,7 @@ window.addEventListener("scroll", () => {
 });
 
 // Scroll animation trigger
-document.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
     document.querySelectorAll(".section").forEach(section => {
         if (section.getBoundingClientRect().top < window.innerHeight) {
             section.classList.add("visible");
@@ -63,11 +63,18 @@ document.addEventListener("scroll", () => {
 
 // Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOMContentLoaded event fired");
+
     loadExperiences();
+    console.log("loadExperiences called");
     loadCertifications();
+    console.log("loadCertifications called");
     loadPublications();
+    console.log("loadPublications called");
     loadEducation();
+    console.log("loadEducation called");
     loadFocus();
+    console.log("loadFocus called");
     lucide.createIcons();
     enableResumeDownload("documents/Lebenslauf_Sinowski.pdf");
     console.log("Document loaded and functions initialized");
