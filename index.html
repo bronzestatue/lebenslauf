@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constantin Sinowski</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="dist/css/styles.min.css">
     <script src="https://unpkg.com/lucide@0.263.0"></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
@@ -23,14 +23,11 @@
         </ul>
     </nav>
 
+    <div class="profile-background"></div>
+
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
-
-            <!-- Profile Picture  -->
-            <div class="profile-picture-container">
-                <img src="images/profile-Sinowski_noBackground.PNG" alt="Profilbild von Constantin Sinowski" class="profile-picture">
-            </div>
 
             <!-- Sidebar Content -->
             <div class="sidebar-content">
@@ -79,7 +76,9 @@
                         <h2>Gehaltsvorstellung</h2>
                         <p class="salary">50.000€ - 60.000€</p>
                     </div>
-
+                    <div>
+                        <button id="downloadResumeButton" class="download-button">Lebenslauf herunterladen</button>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -146,7 +145,7 @@
             </div>
         </main>
     </div>
-    <script src="js/main.js"></script>
+    <script src="dist/js/main.min.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();

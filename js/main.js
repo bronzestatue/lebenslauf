@@ -78,6 +78,12 @@ const experiences = [
 // Certifications data
 const certifications = [
     {
+        title: "KI Spezialist",
+        issuer: "Match4IT",
+        year: "2025",
+        url: "https://match4it.com"
+    },
+    {
         title: "Analyze Data with SQL",
         issuer: "Codecademy",
         year: "2024",
@@ -194,7 +200,7 @@ const publications = [
         publisher: "GRIN",
         year: "2020",
         url: "https://www.grin.com/document/1336653",
-        description: "Anhand des Segments im Markt für Personenverkehr wird aufgezeigt, wie das Unternehmen FlixBus sich im Markt fur Fernbusreisen etabliert hat. Dies wird dadurch gestützt, dass die Geschichte des Personenbeforderungsgesetz aufgeführt wird und wie verschiedene Unternehmen, welche später von FlixBus akquiriert wurden, diesen Markt ausgebaut und bedient haben. Weiter wird auch darauf ein- gegangen, wie sich FlixBus durch Markenbekanntheit und Qualität bei der Buchung und der Fahrt als Marktführer durchgesetzt hat und welche Preiselastizität in der Nachfrage fur Fahrscheine vorherrscht und wie diese die Erlöse beeinflusst. Zum Schluss wird diskutiert, wie die Bundesregierung von Deutschland bei einer Monopolbildung reagiert und wie sich diese Situation auf europäischer Ebene verhält."
+        description: "Anhand des Segments im Markt für Personenverkehr wird aufgezeigt, wie das Unternehmen FlixBus sich im Markt fur Fernbusreisen etabliert hat. Dies wird dadurch gestützt, dass die Geschichte des Personenbeförderungsgesetz aufgeführt wird und wie verschiedene Unternehmen, welche später von FlixBus akquiriert wurden, diesen Markt ausgebaut und bedient haben. Weiter wird auch darauf ein- gegangen, wie sich FlixBus durch Markenbekanntheit und Qualität bei der Buchung und der Fahrt als Marktführer durchgesetzt hat und welche Preiselastizität in der Nachfrage fur Fahrscheine vorherrscht und wie diese die Erlöse beeinflusst. Zum Schluss wird diskutiert, wie die Bundesregierung von Deutschland bei einer Monopolbildung reagiert und wie sich diese Situation auf europäischer Ebene verhält."
     }
 
   // Add all other publications here...
@@ -212,8 +218,8 @@ const education = [
 ];
 
 function createExperienceElement(experience) {
-    const div = document.createElement('div');
-    div.className = 'experience-item';
+    const div = document.createElement("div");
+    div.className = "experience-item";
 
     div.innerHTML = `
     <div class="experience-header">
@@ -232,8 +238,8 @@ function createExperienceElement(experience) {
 
 // Function to create certification elements
 function createCertificationElement(certifications) {
-    const div = document.createElement('div');
-    div.className = 'certification-item';
+    const div = document.createElement("div");
+    div.className = "certification-item";
 
     div.innerHTML = `
     <div class="group relative flex justify-between items-start">
@@ -254,8 +260,8 @@ function createCertificationElement(certifications) {
 
 // Function to create publication elements
 function createPublicationElement(pub) {
-  const div = document.createElement('div');
-  div.className = 'publication-item';
+  const div = document.createElement("div");
+  div.className = "publication-item";
   
   div.innerHTML = `
     <div class="publication-header">
@@ -277,8 +283,8 @@ function createPublicationElement(pub) {
 
 // Function to create education elements
 function createEducationElement(edu) {
-  const div = document.createElement('div');
-  div.className = 'education-item';
+  const div = document.createElement("div");
+  div.className = "education-item";
   
   div.innerHTML = `
     <div class="education-header">
@@ -300,7 +306,7 @@ function createEducationElement(edu) {
 
 // Load experiences
 function loadExperiences() {
-    const container = document.querySelector('.experience-items');
+    const container = document.querySelector(".experience-items");
     experiences.forEach(exp => {
         container.appendChild(createExperienceElement(exp));
     });
@@ -308,7 +314,7 @@ function loadExperiences() {
 
 // Load certifications
 function loadCertifications() {
-    const container = document.querySelector('.certification-items');
+    const container = document.querySelector(".certification-items");
     certifications.forEach(cert => {
         container.appendChild(createCertificationElement(cert));
     });
@@ -316,7 +322,7 @@ function loadCertifications() {
 
 // Load publications
 function loadPublications() {
-  const container = document.querySelector('.publication-items');
+  const container = document.querySelector(".publication-items");
   publications.forEach(pub => {
     container.appendChild(createPublicationElement(pub));
   });
@@ -326,7 +332,7 @@ function loadPublications() {
 
 // Load education
 function loadEducation() {
-  const container = document.querySelector('.education-items');
+  const container = document.querySelector(".education-items");
   education.forEach(edu => {
     container.appendChild(createEducationElement(edu));
   });
@@ -336,38 +342,38 @@ function loadEducation() {
 
 // Floating navigation functionality
 function initFloatingNav() {
-  const nav = document.querySelector('.floating-nav');
-  const navLinks = nav.querySelectorAll('a');
-    const sections = document.querySelectorAll('section[id]');
-    const sidebar = document.getElementById('sidebar');
+  const nav = document.querySelector(".floating-nav");
+  const navLinks = nav.querySelectorAll("a");
+    const sections = document.querySelectorAll("section[id]");
+    const sidebar = document.getElementById("sidebar");
   let lastScrollY = window.scrollY;
   let ticking = false;
 
   // Smooth scroll to section
   navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener("click", (e) => {
       e.preventDefault();
-      const targetId = link.getAttribute('href');
+      const targetId = link.getAttribute("href");
       const targetSection = document.querySelector(targetId);
-      targetSection.scrollIntoView({ behavior: 'smooth' });
+      targetSection.scrollIntoView({ behavior: "smooth" });
     });
   });
 
   // Update active section
   function updateActiveSection() {
-    let currentSection = '';
+    let currentSection = "";
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop - 300) {
-        currentSection = section.getAttribute('id');
+        currentSection = section.getAttribute("id");
       }
     });
 
     navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentSection}`) {
-        link.classList.add('active');
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${currentSection}`) {
+        link.classList.add("active");
       }
     });
   }
@@ -375,13 +381,13 @@ function initFloatingNav() {
   // Hide/show navigation based on scroll direction
   function updateNavVisibility() {
     const currentScrollY = window.scrollY;
-    nav.classList.toggle('hidden', currentScrollY > lastScrollY && currentScrollY > 100);
+    nav.classList.toggle("hidden", currentScrollY > lastScrollY && currentScrollY > 100);
     lastScrollY = currentScrollY;
     ticking = false;
   }
 
   // Scroll event handler
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     if (!ticking) {
       window.requestAnimationFrame(() => {
         updateNavVisibility();
@@ -396,28 +402,110 @@ function initFloatingNav() {
   updateActiveSection();
 }
 
+// Function to display profile picture
+/*
+//This implementation successfully loaded the profile picture file, but it didn't get displayed nicely.
+function displayProfilePicture() {
+    const sidebar = document.getElementById("sidebar");
+    const profilePictureContainer = document.createElement("div");
+    profilePictureContainer.className = "profile-picture-container";
+
+    const profilePicture = document.createElement("img");
+    profilePicture.src = "images/profile-Sinowski_noBackground.PNG";
+    profilePicture.alt = "Profilbild von Constantin Sinowski";
+    profilePicture.className = "profile-picture";
+
+    profilePictureContainer.appendChild(profilePicture);
+    sidebar.insertBefore(profilePictureContainer, sidebar.firstChild);
+
+    // Add class to trigger fade-in effect
+    setTimeout(() => {
+        profilePictureContainer.classList.add("loaded");
+    }, 100);
+}
+
+// Function to fade out profile picture and display sidebar
+function fadeProfilePicture() {
+    const profilePictureContainer = document.querySelector(".profile-picture-container");
+    profilePictureContainer.style.transition = "opacity 1s ease";
+    profilePictureContainer.style.opacity = 0; // Fade out the profile picture
+    setTimeout(() => {
+        profilePictureContainer.style.display = "none"; // Hide the profile picture after fading out
+    }, 1000); // Wait for the fade-out transition to complete
+}
+*/
+
 // Funktion zum Hinzufügen des Scroll-Event-Listeners
 const addScrollEventListener = () => {
-  const profileContainer = document.querySelector('.profile-picture-container');
+  const profileContainer = document.querySelector(".profile-picture-container");
 
   // Event Listener für Scrollen
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
       if (window.scrollY > 100) { // Schwellenwert anpassen
-          document.body.classList.add('scrolled');
+          document.body.classList.add("scrolled");
       } else {
-          document.body.classList.remove('scrolled');
+          document.body.classList.remove("scrolled");
       }
   });
 };
 
+// PDF Download functionality
+/**
+ * @function enableResumeDownload
+ * @description Enables the download of a PDF resume file.
+ * @param {string} pdfPath - The path to the PDF resume file.
+ */
+function enableResumeDownload(pdfPath) {
+    // Get the download button element
+    const downloadButton = document.getElementById("downloadResumeButton");
+
+    // Check if the download button exists
+    if (downloadButton) {
+        // Add a click event listener to the download button
+        downloadButton.addEventListener("click", () => {
+            // Create a new link element
+            const link = document.createElement("a");
+
+            // Set the href attribute to the PDF path
+            link.href = pdfPath;
+
+            // Set the download attribute to specify the filename
+            link.download = "documents/Lebenslauf_Sinowski.pdf";
+
+            // Append the link to the document
+            document.body.appendChild(link);
+
+            // Programmatically click the link to trigger the download
+            link.click();
+
+            // Remove the link from the document
+            document.body.removeChild(link);
+        });
+    } else {
+        console.error("Download button not found. Please ensure the element with id 'downloadResumeButton' exists in the HTML.");
+    }
+}
+
+// Add scroll event listener for profile background fade-out
+window.addEventListener("scroll", () => {
+    const profileBackground = document.querySelector(".profile-background");
+    const scrollY = window.scrollY;
+    
+    if (scrollY > 200) {  // After 200px begins the Fade-Out
+        profileBackground.classList.add("scrolled");
+    } else {
+        profileBackground.classList.remove("scrolled");
+    }
+});
+
 // Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   loadExperiences();
   loadCertifications();
   loadPublications();
   loadEducation();
   initFloatingNav();
   lucide.createIcons();
-  addScrollEventListener(); // Hinzufügen des Scroll-Event-Listeners
-  console.log('Document loaded and functions initialized');
+  enableResumeDownload("documents/Lebenslauf_Sinowski.pdf");
+  console.log("Document loaded and functions initialized");
 });

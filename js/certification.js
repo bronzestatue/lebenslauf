@@ -1,6 +1,12 @@
 // Certifications data
 const certifications = [
     {
+        title: "KI Spezialist",
+        issuer: "Match4IT",
+        year: "2025",
+        url: "https://match4it.com"
+    },
+    {
         title: "Analyze Data with SQL",
         issuer: "Codecademy",
         year: "2024",

@@ -1,8 +1,8 @@
 export function loadFocus() {
     const focusItems = [
         {
-            title: "KI Masterclass Basic",
-            description: "Weiterbildung"
+            title: "Weiterbildung",
+            description: "Weitebildung ist ein wichtiger Bestandteil meiner beruflichen Entwicklung. Ich strebe danach, meine Fähigkeiten kontinuierlich zu verbessern und neue Technologien zu erlernen.",
         }
     ];
 

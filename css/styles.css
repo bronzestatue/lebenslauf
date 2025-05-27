@@ -20,6 +20,54 @@ body {
     color: var(--text-primary);
 }
 
+/* Profile background styles */
+.profile-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/profile-Sinowski_noBackground.PNG");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.scrolled .profile-background {
+    opacity: 0;
+}
+
+/* Profile picture styles */
+.profile-picture-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1;
+}
+
+.profile-picture-container.loaded {
+    opacity: 1;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Calendly Container */
 .calendly-container {
     margin-top: 1rem;
@@ -73,6 +121,12 @@ body {
     width: 320px;
     padding: 2rem;
     margin-right: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1; /* Ensure sidebar is above the profile picture */
+    transition: left 0.3s ease;
 }
 
 .sidebar-content {
@@ -184,6 +238,10 @@ body {
     flex: 1;
     padding: 2rem 3rem;
     background-color: var(--primary-bg);
+    margin-left: 320px; /* Adjust margin to account for sidebar */
+    transition: margin-left 0.3s ease, width 0.3s ease; /* Add transition for smooth animation */
+    position: relative;
+    z-index: 2;
 }
 
 .content-wrapper {
@@ -409,6 +467,22 @@ section {
     scroll-margin-top: 2rem;
 }
 
+/* Download button styles */
+.download-button {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.download-button:hover {
+    background-color: #3772e7;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
@@ -456,4 +530,10 @@ section {
     section {
         padding-right: 6rem; /* Größere Padding für größere Bildschirme */
     }
+}
+
+/* Überblenden zur Sidebar-Farbe beim Scrollen */
+.scrolled .sidebar {
+    background-image: none; /* Entfernt das Hintergrundbild */
+    background-color: var(--sidebar-bg); /* Setzt die Sidebar-Hintergrundfarbe */
 }
