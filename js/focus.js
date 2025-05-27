@@ -2,7 +2,7 @@ function loadFocus() {
     const focusItems = [
         {
             title: "Weiterbildung",
-            description: "Weitebildung ist ein wichtiger Bestandteil meiner beruflichen Entwicklung. Ich strebe danach, meine Fähigkeiten kontinuierlich zu verbessern und neue Technologien zu erlernen.",
+            description: "Aktuelle und zukünftige Weiterbildungen in den Bereichen Data Science, Data Engineering und Cloud Computing.", 
         }
     ];
 
