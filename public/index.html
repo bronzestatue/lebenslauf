@@ -1,33 +1,125 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="dist/css/styles.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constantin Sinowski</title>
+    <link rel="stylesheet" href="../css/styles.css">
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+</head>
+<body>
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">
+        <ul>
+            <li><a href="#focus">Fokus</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#appointment">Terminbuchung</a></li>
+            <li><a href="#certifications">Zertifizierungen</a></li>
+            <li><a href="#experiences">Erfahrung</a></li>
+            <li><a href="#publications">Veröffentlichungen</a></li>
+            <li><a href="#education">Studium</a></li>
+        </ul>
+    </nav>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <div class="profile-background"></div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <script src="dist/js/bundle.js" type="module" defer></script>
-  </body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="header" id="sidebar-header">
+                    <h1>Constantin Sinowski</h1>
+                    <a href="#education" class="subtitle">
+                        <span>Bachelor of Engineering</span>
+                    </a>
+                </div>
+                <div class="sections">
+                    <div>
+                        <h2>Kontakt</h2>
+                        <div id="contact" class="contact-details">
+                            <a href="mailto:constantin@sinowski.de" class="contact-item" title="E-Mail senden">
+                                <i data-lucide="mail"></i>
+                                <span>constantin@sinowski.de</span>
+                            </a>
+                            <a href="#appointment" class="contact-item" title="Telefonnummer anzeigen">
+                                <i data-lucide="phone"></i>
+                                <span>+49 156 79001672</span>
+                            </a>
+                            <div class="contact-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Berlin, Deutschland</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Soziale Medien</h2>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/constantinsinowski/" class="social-link" title="LinkedIn Profil">
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/constantinsinowski/" class="social-link" title="Instagram Profil">
+                                <i data-lucide="instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Gehaltsvorstellung</h2>
+                        <p class="salary">50.000€ - 60.000€</p>
+                    </div>
+                    <div>
+                        <button id="downloadResumeButton" class="download-button">Lebenslauf herunterladen</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <section id="focus">
+                    <div class="section-header">
+                        <h2><i data-lucide="target"></i> Fokus</h2>
+                    </div>
+                    <div class="focus-items">
+                        <a href="https://sinowski.de" target="_blank" rel="noopener" class="focus-link">sinowski.de</a>
+                        <br><br>
+                    </div>
+                </section>
+                <section id="appointment">
+                    <div class="section-header">
+                        <h2><i data-lucide="phone"></i> Terminbuchung</h2>
+                    </div>
+                    <div class="calendly-container">
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/constantinsinowski/telefonat"></div>
+                    </div>
+                </section>
+                <section id="certifications">
+                    <div class="section-header">
+                        <h2><i data-lucide="award"></i> Zertifizierungen</h2>
+                    </div>
+                    <div class="certification-items"></div>
+                </section>
+                <section id="experiences">
+                    <div class="section-header">
+                        <h2><i data-lucide="briefcase"></i> Professionelle Erfahrung</h2>
+                    </div>
+                    <div class="experience-items"></div>
+                </section>
+                <section id="publications">
+                    <div class="section-header">
+                        <h2><i data-lucide="book-open"></i> Veröffentlichungen</h2>
+                    </div>
+                    <div class="publication-items"></div>
+                </section>
+                <section id="education">
+                    <div class="section-header">
+                        <h2><i data-lucide="book"></i> Studium</h2>
+                    </div>
+                    <div class="education-items"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../dist/js/bundle.js" type="module"></script>
+</body>
 </html>
