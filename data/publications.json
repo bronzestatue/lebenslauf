@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Verantwortungsvoller Umgang mit künstlicher Intelligenz. Wie können Menschenrechte beim Einsatz von KI gewahrt werden?",
+    "publisher": "GRIN",
+    "year": "2023",
+    "description": "Diese Arbeit zielt darauf ab, AI-Methoden und deren Regulierung darzustellen, bestehende Rahmenbedingungen und Regulierungen von AI zu beleuchten und eine Diskussionsgrundlage über ihren Nutzen, Risiken und Gefahren im Sinne der Menschenrechte zu schaffen. Sie betont die Wichtigkeit einer angemessenen Überwachung von AI, um Missbrauch einzudämmen, und fordert die Sensibilisierung der Öffentlichkeit für die Potenziale und Risiken der AI, um Menschen vor Betrug und Manipulation zu schützen."
+  },
+  {
+    "title": "Integration eines Qualitätsmanagements in der Softwareentwicklung",
+    "publisher": "Amazon",
+    "year": "2023",
+    "description": "Das Qualitätsmanagement in der Softwareentwicklung bezieht sich auf den Prozess, die Methoden und die Tools, die verwendet werden, um die Qualität von Softwareprodukten sicherzustellen. Dies beinhaltet die Überwachung und Überprüfung der Entwicklung von Anfang bis Ende, um sicherzustellen, dass die Software den Anforderungen des Kunden entspricht und Fehler minimiert werden. Ein wichtiger Teil des Qualitätsmanagements in der Softwareentwicklung ist die Durchführung von Tests."
+  }
+  // ...add the rest of your publications here...
+]

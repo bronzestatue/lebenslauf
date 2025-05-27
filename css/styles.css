@@ -525,3 +525,40 @@ section.visible {
 .download-button:hover {
     background-color: #3772e7;
 }
+
+/* Data entry card style */
+.data-entry {
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.data-entry:hover {
+    transform: translateY(-3px);
+}
+
+/* Spinner for loading */
+.spinner {
+    border: 4px solid #eee;
+    border-top: 4px solid var(--accent);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+/* Error message */
+.error-message {
+    color: #b91c1c;
+    background: #fee2e2;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
+}
