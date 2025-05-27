@@ -25,7 +25,7 @@ function enableResumeDownload(pdfPath) {
                         const link = document.createElement("a");
                         link.href = pdfPath;
                         link.download = "Lebenslauf_Sinowski.pdf";
-                        link.style.display = 'none'; // Hide the link
+                        link.style.display = "none"; // Hide the link
                         document.body.appendChild(link);
                         link.click();
                         document.body.removeChild(link);
@@ -64,20 +64,34 @@ window.addEventListener("scroll", () => {
 });
 
 // Initialize when DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     console.log("DOMContentLoaded event fired");
 
-    loadExperiences();
-    console.log("loadExperiences called");
-    loadCertifications();
-    console.log("loadCertifications called");
-    loadPublications();
-    console.log("loadPublications called");
-    loadEducation();
-    console.log("loadEducation called");
-    loadFocus();
-    console.log("loadFocus called");
-    lucide.createIcons();
-    enableResumeDownload("documents/Lebenslauf_Sinowski.pdf");
-    console.log("Document loaded and functions initialized");
+    try {
+        // Check if containers exist before loading
+        const containers = {
+            experiences: document.querySelector(".experience-items"),
+            certifications: document.querySelector(".certification-items"),
+            publications: document.querySelector(".publication-items"),
+            education: document.querySelector(".education-items"),
+            focus: document.querySelector(".focus-items")
+        };
+
+        // Log container status
+        Object.entries(containers).forEach(([name, container]) => {
+            console.log(`${name} container ${container ? 'found' : 'not found'}`);
+        });
+
+        if (containers.experiences) await loadExperiences();
+        if (containers.certifications) await loadCertifications();
+        if (containers.publications) await loadPublications();
+        if (containers.education) await loadEducation();
+        if (containers.focus) await loadFocus();
+
+        lucide.createIcons();
+        enableResumeDownload("documents/Lebenslauf_Sinowski.pdf");
+        console.log("All sections loaded successfully");
+    } catch (error) {
+        console.error("Error loading content:", error);
+    }
 });

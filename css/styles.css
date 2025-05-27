@@ -226,9 +226,8 @@ body {
 /* Section styles */
 section {
     margin-bottom: 4rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 1; /* Changed from 0 to ensure visibility */
+    transform: none; /* Remove transform to ensure visibility */
 }
 
 section.visible {
@@ -561,4 +560,33 @@ section.visible {
     padding: 10px;
     text-align: center;
     margin: 10px 0;
+}
+
+/* Ensure sections are visible */
+section {
+    margin-bottom: 4rem;
+    opacity: 1; /* Changed from 0 to ensure visibility */
+    transform: none; /* Remove transform to ensure visibility */
+}
+
+.section {
+    opacity: 1;
+    transform: none;
+}
+
+/* Ensure content is above background */
+.main-content {
+    position: relative;
+    z-index: 2;
+    background-color: var(--primary-bg);
+}
+
+/* Ensure containers are visible */
+.experience-items,
+.certification-items,
+.publication-items,
+.education-items,
+.focus-items {
+    position: relative;
+    z-index: 2;
 }

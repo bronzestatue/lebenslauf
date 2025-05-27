@@ -88,18 +88,28 @@ function createExperienceElement(experience) {
 }
 
 // Load experiences
-function loadExperiences() {
+async function loadExperiences() {
     console.log("loadExperiences function called");
     const container = document.querySelector(".experience-items");
-    if (container) {
-        console.log("Experience container found");
+    
+    if (!container) {
+        console.error("Experience container not found");
+        return;
+    }
+    
+    try {
         experiences.forEach(exp => {
             const element = createExperienceElement(exp);
             container.appendChild(element);
-            console.log("Appended experience:", exp.title);
+            console.log("Added experience:", exp.title);
         });
-    } else {
-        console.error("Experience container not found");
+        
+        // Make sections visible after loading
+        container.querySelectorAll('.section').forEach(section => {
+            section.classList.add('visible');
+        });
+    } catch (error) {
+        console.error("Error loading experiences:", error);
     }
 }
 

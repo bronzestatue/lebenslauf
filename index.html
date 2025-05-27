@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constantin Sinowski</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Make sure these are in the correct order -->
     <script src="https://unpkg.com/lucide@0.263.0"></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script src="js/main.js" type="module"></script>
+    <script>
+        // Remove this as it's already handled in main.js
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     lucide.createIcons();
+        // });
+    </script>
 </head>
 <body>
 
@@ -145,12 +153,6 @@
             </div>
         </main>
     </div>
-    <script src="js/main.js" type="module"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-        });
-    </script>
 </body>
 </html>
 
