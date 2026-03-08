@@ -19,6 +19,7 @@
             <li><a href="#education">Studium</a></li>
             <li><a href="#certifications">Zertifizierungen</a></li>
             <li><a href="#publications">Veröffentlichungen</a></li>
+            <li><a href="#appointment">Terminbuchung</a></li>
             <li><a href="#impressum">Impressum</a></li>
         </ul>
     </nav>
@@ -62,6 +63,18 @@
                             </a>
                         </div>
                     </div>
+                    <div>
+                        <h2>Lebenslauf</h2>
+                        <div class="sidebar-download">
+                                <a href="lebenslauf.pdf" class="download-button" download title="Lebenslauf als PDF herunterladen">
+                                    <i data-lucide="file-text"></i>
+                                    <i data-lucide="download"></i>
+                                    PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    
 
                 </div>
             </div>
@@ -99,7 +112,7 @@
                 <!-- Live Preview (Lovable / Bolt / Base44 iframe) -->
                 <section id="preview">
                     <div class="section-header">
-                        <h2><i data-lucide="monitor"></i> Live Vorschau</h2>
+                        <h2><i data-lucide="monitor"></i> Vorschau</h2>
                     </div>
                     <div class="preview-container">
                         <iframe
@@ -127,7 +140,7 @@
                             <div class="experience-header">
                                 <div>
                                     <h3>IT Consultant — HAVI Solutions GmbH &amp; Co. KG</h3>
-                                    <p class="company"><a href="https://www.havi.com/" target="_blank">HAVI Solutions GmbH &amp; Co. KG</a></p>
+                                    <p class="company"><a href="https://www.havi.com/" target="_blank" rel="noopener">HAVI Solutions GmbH &amp; Co. KG</a></p>
                                     <p class="details"><span class="employment-type">Vollzeit</span> | <span class="location">Remote</span></p>
                                 </div>
                                 <span class="date">06.2024 - 11.2024</span>
@@ -167,33 +180,37 @@
                         <h2><i data-lucide="award"></i> Zertifizierungen</h2>
                     </div>
                     <div class="certification-items">
-                    </div>
                         <!-- Minimal inline certification sections (baseline for fast paint) -->
                         <div class="cert-section" id="certs-ai">
                             <h3>Künstliche Intelligenz</h3>
-                            <div class="certification-item">
-                                <div class="group relative flex justify-between items-start">
-                                    <div>
-                                        <div class="publication-title"><h3>Elements of AI for Business</h3></div>
-                                        <p class="date">MinnaLearn, 2026</p>
-                                        <p class="description">Weiterbildung im Bereich KI; Anwendung webbasierter Automatisierungslösungen.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
+
+                        </div>
                         <div class="cert-section" id="certs-bi">
                             <h3>Datenanalyse &amp; Business Intelligence</h3>
-                            <div class="certification-item">
-                                <div class="group relative flex justify-between items-start">
-                                    <div>
-                                        <div class="publication-title"><h3>Analyze Data with SQL</h3></div>
-                                        <p class="date">Codecademy, 2024</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
+
+                        </div>
+                        <div class="cert-section" id="certs-cloud">
+                            <h3>Cloud &amp; Infrastruktur</h3>
+
+
+                        </div>
+                        <div class="cert-section" id="certs-automation">
+                            <h3>Prozessautomatisierung</h3>
+
+
+                        </div>
+                        <div class="cert-section" id="certs-programming">
+                            <h3>Programmiersprachen</h3>
+
+
+                        </div>
+                        <div class="cert-section" id="certs-web">
+                            <h3>Web</h3>
+
+
+                        </div>
                     </div>
                 </section>
 
@@ -282,6 +299,18 @@
           
                     </div>
                 </section>
+
+                <!-- Appointment / Calendly -->
+                <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+                <section id="appointment">
+                    <div class="section-header">
+                        <h2><i data-lucide="phone"></i> Terminbuchung</h2>
+                    </div>
+                    <div class="calendly-container">
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/constantinsinowski/telefonat"></div>
+                    </div>
+                </section>
                 
             </div>
         </main>
@@ -308,8 +337,10 @@
         <div class="footer-bottom">
             <p>&copy; 2026 Constantin Sinowski. Alle Rechte vorbehalten.</p>
             <div class="footer-download">
-                <a href="lebenslauf.pdf" class="download-button" download title="Lebenslauf PDF herunterladen">
-                    <i data-lucide="file-pdf"></i> Lebenslauf (PDF)
+                <a href="lebenslauf.pdf" class="download-button" download title="Lebenslauf als PDF herunterladen">
+                    <i data-lucide="file-text"></i>
+                    <i data-lucide="download"></i>
+                    Lebenslauf (PDF)
                 </a>
             </div>
         </div>
@@ -318,6 +349,3 @@
     <script src="main.js"></script>
 </body>
 </html>
-
-
-
