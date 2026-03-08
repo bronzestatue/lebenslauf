@@ -1,0 +1,255 @@
+[
+    {
+        "title": "Elements of AI for Business",
+        "issuer": "MinnaLearn",
+        "year": "2026",
+        "url": "https://courses.minnalearn.com/certificate/en/elements-of-ai-for-business/221bff01-5c58-4c08-8d53-49a25e5e9b84",
+        "details": "Weiterbildung im Bereich KI; Anwendung webbasierter Automatisierungslösungen und Visualisierung strukturierter Daten."
+    },
+    {
+        "title": "KI Spezialist",
+        "issuer": "Match4IT",
+        "year": "2025",
+        "url": "https://match4it.com"
+    },
+    {
+        "title": "KI - Chancen und Risiken für die Cybersicherheit",
+        "issuer": "Hubert Burda Media",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "KNIME L1",
+        "issuer": "KNIME",
+        "year": "2023",
+        "url": "https://www.credly.com/badges/891bf1ee-0b27-4b8d-945a-1a1587e1d36b/public_url"
+    },
+    {
+        "title": "Analyze Data with SQL",
+        "issuer": "Codecademy",
+        "year": "2024",
+        "url": "https://www.codecademy.com/profiles/_cosinus/certificates/5cafb2d937090210d7df3652"
+    },
+    {
+        "title": "Grundlegendes zur Parallelität in MySQL",
+        "issuer": "Microsoft Learn",
+        "year": "2024",
+        "url": ""
+    },
+    {
+        "title": "Grundlegendes zur Client-Server-Kommunikation in MySQL",
+        "issuer": "Microsoft Learn",
+        "year": "2024",
+        "url": ""
+    },
+    {
+        "title": "Konfigurieren von Speicher- und Dateidiensten",
+        "issuer": "Microsoft Learn",
+        "year": "2024",
+        "url": ""
+    },
+    {
+        "title": "SQL Server-Upgrades",
+        "issuer": "Microsoft Learn",
+        "year": "2024",
+        "url": ""
+    },
+    {
+        "title": "Programmieren mit Transact-SQL",
+        "issuer": "Microsoft Learn",
+        "year": "2024",
+        "url": ""
+    },
+    {
+        "title": "Erste Schritte mit Abfragen mit Transact-SQL",
+        "issuer": "Microsoft Learn",
+        "year": "2024",
+        "url": ""
+    },
+    {
+        "title": "Learn SQL Course",
+        "issuer": "Codecademy",
+        "year": "2024",
+        "url": ""
+    },
+    {
+        "title": "How to Transform Tables with SQL Course",
+        "issuer": "Codecademy",
+        "year": "2019",
+        "url": ""
+    },
+    {
+        "title": "How to Analyze Business Metrics with SQL Course",
+        "issuer": "Codecademy",
+        "year": "2015",
+        "url": ""
+    },
+    {
+        "title": "BI Dashboards with Power BI",
+        "issuer": "Codecademy",
+        "year": "2023",
+        "url": "https://www.codecademy.com/profiles/constantinsinowski/certificates/1cb76ac48943853ca32c394afeb491c9"
+    },
+    {
+        "title": "Aufbereiten von Daten für die Analyse mit Power BI",
+        "issuer": "Microsoft Learn",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Abrufen und Transformieren von Daten mit Power BI",
+        "issuer": "Microsoft Learn",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Power BI – Vom Datenchaos zur effektiven Entscheidungsgrundlage",
+        "issuer": "Hubert Burda Media",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Power BI für Einsteiger:innen",
+        "issuer": "Hubert Burda Media",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Erste Schritte mit Power BI",
+        "issuer": "Microsoft Learn",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Einführung in SAP S/4 HANA",
+        "issuer": "Hochschule Fresenius",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Data Science - Definition, Grundlagen und Anwendungsbeispiele",
+        "issuer": "Hochschule Fresenius",
+        "year": "2022",
+        "url": ""
+    },
+    {
+        "title": "Microsoft Excel VBA: Grundlagen der Programmierung",
+        "issuer": "Hochschule Fresenius",
+        "year": "2022",
+        "url": ""
+    },
+    {
+        "title": "Excel Advanced",
+        "issuer": "Hochschule Fresenius",
+        "year": "2022",
+        "url": ""
+    },
+    {
+        "title": "Learn R Course",
+        "issuer": "Codecademy",
+        "year": "2019",
+        "url": ""
+    },
+    {
+        "title": "Learn Python 2 Course",
+        "issuer": "Codecademy",
+        "year": "2019",
+        "url": ""
+    },
+    {
+        "title": "Bash Scripting",
+        "issuer": "Codecademy",
+        "year": "2024",
+        "url": "https://www.codecademy.com/profiles/_cosinus/certificates/37c55263a9f1b1f7603f7551c293ecbd"
+    },
+    {
+        "title": "Verwalten von Einstellungen für einen lokalen Windows-Computer mithilfe von PowerShell-Cmdlets",
+        "issuer": "Microsoft Learn",
+        "year": "2024",
+        "url": ""
+    },
+    {
+        "title": "Erstellen und Verwalten geplanter Aufträge mithilfe von Windows PowerShell",
+        "issuer": "Microsoft Learn",
+        "year": "2024",
+        "url": ""
+    },
+    {
+        "title": "Erstellen und Verwalten von Hintergrundaufträgen mithilfe von Windows PowerShell",
+        "issuer": "Microsoft Learn",
+        "year": "2024",
+        "url": ""
+    },
+    {
+        "title": "Work with different technologies in Power Automate for desktop",
+        "issuer": "Microsoft Learn",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Implement advanced logic in Power Automate for desktop",
+        "issuer": "Microsoft Learn",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Create and Manage Automated Processes by using Power Automate",
+        "issuer": "Microsoft Learn",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Automate processes with Robotic Process Automation and Power Automate for desktop",
+        "issuer": "Microsoft Learn",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Automate a business process with Power Automate",
+        "issuer": "Microsoft Learn",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Learn Bash Scripting Course",
+        "issuer": "Codecademy",
+        "year": "2018",
+        "url": ""
+    },
+    {
+        "title": "Learn C# Course",
+        "issuer": "Codecademy",
+        "year": "2023",
+        "url": ""
+    },
+    {
+        "title": "Learn Git & GitHub Course",
+        "issuer": "Codecademy",
+        "year": "2019",
+        "url": ""
+    },
+    {
+        "title": "Learn the Command Line Course",
+        "issuer": "Codecademy",
+        "year": "2018",
+        "url": ""
+    },
+    {
+        "title": "Learn Java Course",
+        "issuer": "Codecademy",
+        "year": "2016",
+        "url": ""
+    },
+    {
+        "title": "Learn C++ Course",
+        "issuer": "Codecademy",
+        "year": "2015",
+        "url": ""
+    },
+    {
+        "title": "PADI Divemaster",
+        "issuer": "PADI",
+        "year": "2024",
+        "url": "https://achievements.padi.com/faa80b73-a620-48a7-a8ed-d29169464eab"
+    }
+]
