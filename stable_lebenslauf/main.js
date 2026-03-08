@@ -664,9 +664,15 @@ async function loadExperiences() {
   const container = document.querySelector('.experience-items');
 
   // Render embedded fallback if present
-  const embedded = readEmbeddedJSON('experiences-fallback');
-  if (Array.isArray(embedded) && embedded.length) {
-    embedded.forEach(exp => container.appendChild(createExperienceElement(exp)));
+  // If the HTML already contains minimal entries, treat them as baseline.
+  const existingCount = container.querySelectorAll('.experience-item').length;
+
+  // If container is empty, render embedded fallback first for quick paint
+  if (existingCount === 0) {
+    const embedded = readEmbeddedJSON('experiences-fallback');
+    if (Array.isArray(embedded) && embedded.length) {
+      embedded.forEach(exp => container.appendChild(createExperienceElement(exp)));
+    }
   }
 
   // If enabled, fetch canonical JSON and replace only if it has more entries
@@ -687,7 +693,7 @@ async function loadExperiences() {
       console.warn('Failed to fetch experiences.json; keeping embedded or inline data.', err);
     }
   } else {
-    // If not using data files and no embedded content was present, use inline fallback
+    // If not using data files and container empty, use inline fallback
     const hasItems = container.querySelectorAll('.experience-item').length > 0;
     if (!hasItems && Array.isArray(experiencesFallback)) {
       experiencesFallback.forEach(exp => container.appendChild(createExperienceElement(exp)));
@@ -752,13 +758,18 @@ async function loadCertifications() {
     }
   }
 
-  // Use embedded fallback first (renders as plain HTML quickly)
-  const embedded = readEmbeddedJSON('certifications-fallback');
-  if (Array.isArray(embedded) && embedded.length) {
-    renderGrouped(embedded);
+  // If the HTML already contains minimal cert sections/items, keep them as baseline.
+  const existingCertCount = container.querySelectorAll('.certification-item').length + container.querySelectorAll('.cert-section').length;
+
+  // If container is empty, render embedded fallback first for quick paint
+  if (existingCertCount === 0) {
+    const embedded = readEmbeddedJSON('certifications-fallback');
+    if (Array.isArray(embedded) && embedded.length) {
+      renderGrouped(embedded);
+    }
   }
 
-  // If enabled, fetch canonical JSON and replace only if it has more entries
+  // If enabled, fetch canonical JSON and replace only if it has more entries than currently rendered
   if (USE_DATA_FILES) {
     try {
       const res = await fetch('certifications.json');
