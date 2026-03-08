@@ -1,6 +1,6 @@
 export function loadContact() {
     const contactInfo = {
-        email: "constantin@sinowski.de",
+        email: "bewerbung@sinowski.de",
         phone: "+49 156 79001672",
         location: "Berlin, Deutschland"
     };
