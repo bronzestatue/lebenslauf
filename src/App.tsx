@@ -16,9 +16,9 @@ function App() {
             <div>
               <h2 className="text-sm uppercase tracking-wider text-gray-400 mb-3">Kontakt</h2>
               <div className="space-y-3">
-                <a href="mailto:constantin@sinowski.de" className="flex items-center gap-3 text-gray-300 hover:text-white">
+                <a href="mailto:bewerbung@sinowski.de" className="flex items-center gap-3 text-gray-300 hover:text-white">
                   <Mail className="w-4 h-4" />
-                  <span>constantin@sinowski.de</span>
+                  <span>bewerbung@sinowski.de</span>
                 </a>
                 <a href="tel:+4915679001672" className="flex items-center gap-3 text-gray-300 hover:text-white">
                   <Phone className="w-4 h-4" />
