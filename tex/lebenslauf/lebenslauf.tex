@@ -1,0 +1,299 @@
+\documentclass[a4paper,10pt]{article}
+
+% ---- Packages ----
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{geometry}
+% \usepackage[a4paper,margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{fontawesome5}
+\usepackage{fancyhdr}
+
+% ---- Disable microtype expansion (optional) ----
+\microtypesetup{expansion=false}
+\definecolor{CVBlue}{RGB}{0, 51, 102} % Un bleu marine profond et élégant
+
+% ---- Hyperref ----
+\usepackage[
+    pdftex,
+    colorlinks=true,
+    linkcolor=CVBlue,
+    urlcolor=CVBlue,
+    pdfauthor={Constantin Sinowski},
+    pdftitle={Lebenslauf}
+]{hyperref}
+
+% ---- Fancyhdr ----
+% \geometry{a4paper, left=25mm, right=25mm, top=25mm, bottom=25mm}
+\pagestyle{fancy}
+\fancyhf{} % Entfernt Standard-Kopf- und Fußzeilen
+\fancyhead[C]{%
+    {\LARGE \textbf{Constantin Sinowski}} \\
+    \vspace{5pt}
+    \faGlobeEurope\ \hyperref[sec:personal]{Berlin, Deutschland} | \faPhone\ \href{tel:+4915679001672}{+49 1567 9001672} | \faEnvelope\ \href{mailto:bewerbung@sinowski.de}{bewerbung@sinowski.de} | \faGlobe\ \href{https://sinowski.de}{sinowski.de}
+}
+
+\setlength{\headheight}{33pt} % Passt die Höhe der Kopfzeile an
+
+\begin{document}
+
+\vspace{10pt}
+
+\section*{Berufliches Profil}
+\vspace{-10pt} % Entfernt zusätzlichen Abstand nach der Überschrift
+
+\begin{minipage}{0.75\textwidth}
+    \textbf{Data Analyst} mit Erfahrung in 
+    \textbf{Entscheidungsunterstützung, Systemintegration und Automatisierung}. \\ 
+    Wirtschaftsingenieur mit Schwerpunkt auf datenbasierter \\
+    \textbf{Prozessoptimierung} und KI-gestützter Analyse. \\
+    Erfahrung in SQL-basierter Datenextraktion, \\
+    statistischer Analyse und Visualisierung komplexer Datensätze. 
+    Fokussiert auf die strukturierte Integration neuer Technologien in bestehende 
+    Geschäftsprozesse – mit dem Ziel, Effizienz, Transparenz und 
+    \textbf{Entscheidungsqualität} messbar zu verbessern.
+\end{minipage}
+\hfill
+\begin{minipage}{0.2\textwidth}
+    \centering
+    \vspace{15pt} % Verschiebt das Bild nach unten
+    \includegraphics[width=4cm]{IMG_2873.jpg} % Profilbild
+\end{minipage}
+
+\vspace{5pt}
+
+\section*{Fähigkeiten \& Fachwissen}
+\begin{itemize}
+    \item[\faRobot] \hyperref[ai]{\textbf{Künstliche Intelligenz}} – Copilot, Make, LM Studio, IFTTT 
+    \item[\faChartBar] \hyperref[analytics]{\textbf{Datenanalyse \& Business Intelligence}} – SQL, Power BI, Excel, Sheets
+    \item[\faDatabase] \textbf{Cloud-Infrastruktur} – AWS, Azure, GCP, Docker, Kubernetes, Terraform
+    \item[\faCogs] \hyperref[process]{\textbf{Prozessautomatisierung}} – REST-APIs, Git, Perl, Bash, PowerShell, KNIME
+    \item[\faCode] \hyperref[code]{\textbf{Programmiersprachen}} – Python, Perl, Java, C\#, R, Android, Ruby
+    \item[\faGlobe] \textbf{Webentwicklung} – React, Node.js, Javascript, CSS, HTML
+    \item[\faTasks] \textbf{Projektmanagement \& Agile Methoden} – Scrum, Kanban
+    \item[\faLock] \textbf{IT-Sicherheit \& Datenschutz} – ISO 27001, GDPR
+\end{itemize}
+
+\vspace{5pt}
+
+\section*{Berufliche Erfahrung}
+
+\noindent\textbf{\href{https://www.thormontagen.de/}{THOR Solutions}} -- \textit{Techniker für Service und Wartung} \\
+\textit{08.2025 – 10.2025}  
+
+\vspace{5pt}
+
+\noindent\textbf{\href{https://www.havi.com/}{HAVI Solutions GmbH \& Co. KG}} -- \textit{IT-Berater} \\
+\textit{06.2024 – 11.2024}  
+\begin{itemize}
+    \item[\faProjectDiagram] Anpassung technischer Workflows zur Verbesserung der Datenqualität
+    \item[\faUsers] Abstimmung technischer Anforderungen mit Fachbereichen
+    \item[\faTerminal] Strukturierte Extraktion und Transformation zur \textbf{Datenmigration in XML} zur Transformation großer Datensätze mittels SQL.
+    \item[\faDatabase] Durchführung von \textbf{Datenanalysen} mit \textbf{SQL} und \textbf{Perl}, um komplexe Muster für strategische Entscheidungen zu identifizieren.
+    \item[\faCogs] Analyse und Optimierung interner Prozesslogik zur Entwicklung von \textbf{Automatisierungsskripten} mit \textbf{Bash} und \textbf{PowerShell}.
+    \item[\faTools] Nutzung von \textbf{Visual Studio} und \textbf{Git} wie auch Microsoft Excel, Teams, Word und Copilot.
+\end{itemize}
+
+\newpage
+
+\noindent\textbf{\href{https://www.burda.com/}{Hubert Burda Media Holding}} -- \textit{Business Intelligence \& Datenanalyse} \\
+\textit{04.2023 – 02.2024}  
+\begin{itemize}
+    \item[\faProjectDiagram] Erstellung datenbasierter Entscheidungsgrundlagen für interne Stakeholder
+    \item[\faChartBar] Visualisierung komplexer Datenstrukturen zur Prozessoptimierung
+    \item[\faSignal] Analyse finanzieller Kennzahlen und Performance-Daten
+    \item[\faChartLine] Entwicklung und Optimierung von Reportingstrukturen 
+    \item[\faFileCsv] Datenaufbereitung und Visualsierung von \textbf{Finanzdatenanalysen} mit \textbf{KNIME} und \textbf{Excel}, um detaillierte Berichte für Entscheidungsprozesse zu erstellen.
+    \item[\faFileExcel] Entwicklung und Pflege von \textbf{Arbeitszeitnachweissystemen}, um eine genaue Dokumentation von Arbeitszeiten zu gewährleisten.
+\end{itemize}
+
+\vspace{5pt}
+
+\noindent\textbf{\href{https://www.ekd-solar.de/}{Energiekonzepte Deutschland GmbH}} -- \textit{Handelsvertreter} \\
+\textit{02.2023 - 06.2023}
+\begin{itemize}
+    \item Vertrieb von \textbf{Photovoltaikanlagen mit Energiespeichern}
+\end{itemize}
+
+\vspace{5pt}
+
+\noindent\textbf{eeTech} –- \textit{Teamleiter} \\
+\textit{02.2013 – 06.2013}
+\begin{itemize}
+    \item[\faChartLine] \textbf{Beförderung} zum Teamleiter eines 12 Personen starkem Verkaufsteam mit \textbf{70\% höheren}
+Verkaufszahlen über dem Durchschnitt als Ergebnis.
+    \item Installation von \textbf{Energiesparleisten} zur \textit{Reduzierung des Stromverbrauchs} um bis zu 50\%
+\end{itemize}
+
+\section*{Freiberufliche \& Projektbasierte Arbeit}
+\textbf{\href{https://www.jobvalley.com/}{jobvalley}}
+\begin{itemize}
+    \item \textbf{\href{https://glginsights.com/}{GLG Research}} – Consultant (11.2025)
+    \item[\faHeadset] \textbf{\href{https://www.enpal.de/}{Enpal B.V.}} – DC Manager (05.2024 – 05.2024)
+    \item[\faRobot] \textbf{\href{https://www.outlier.ai/}{Scale AI}} – KI Trainer (10.2023 – 05.2024)
+    \item[\faChartLine] \textbf{\href{https://www.tier.app/}{TIER Mobility SE}} – Datenerfasser (10.2021 – 10.2022)
+    \item[\faChartPie] \textbf{\href{https://www.sasserath-munzinger.de/}{Sasserath Munzinger Plus}} – Datenanalyst (05.2022 – 06.2022)
+    \item[\faTerminal] \textbf{\href{https://www.havi.com/}{HAVI Solutions GmbH \& Co. KG}} – Junior Softwareentwickler (02.2019 – 08.2019)
+    \item[\faTerminal] \textbf{\href{https://www.motion-fashion.com/}{Motion Fashion Network Europe GmbH}} – EDV-Programmierer (03.2018 – 06.2018)
+    \item[\faHeadset] \textbf{\href{https://www.ndrmedia.de/}{NDRmedia}} – Kundendienst (11.2017 – 01.2018)
+\end{itemize}
+
+\vspace{5pt}
+
+\section*{Bildung} \label{sec:education}
+\textbf{Bachelor of Engineering} \\
+Wirtschaftsingenieurswesen Digital Engineering \& Management \\  
+Hochschule Fresenius \href{https://www.hs-fresenius.de/hochschule/fachbereiche/onlineplus/}{onlineplus} \\  
+\textit{Abschlussjahr: 2024}  
+\vspace{5pt}
+\textbf{Studienschwerpunkte:}  
+\begin{itemize}
+    \item Datenstrukturierung und Visualisierung mit R und ggplot  
+    \item IT-Sicherheit und Datenschutz  
+    \item Prozessmanagement und Optimierung  
+    \item Innovationsmanagement und digitale Transformation  
+    \item Industrielle Robotik und Automatisierung  
+    \item Datenanalyse und statistische Modellierung  
+    \item \hyperref[sec:publications]{Veröffentlichung} {\href{https://grin.com/user/5344426}{wissenschaftlicher Artikel}}
+\end{itemize}
+
+\vspace{10pt}  
+
+\section*{Zertifikate}
+\begin{itemize}
+
+    \item[\faRobot] \textbf{Künstliche Intelligenz} \label{ai} 
+    \begin{itemize}
+        \item \textbf{\href{https://courses.minnalearn.com/certificate/en/elements-of-ai-for-business/221bff01-5c58-4c08-8d53-49a25e5e9b84}{Elements of AI for Business}} – MinnaLearn (2026)
+        \begin{itemize}
+            \item Weiterbildung im Bereich KI
+            \item Anwendung von webbasierten Automatisierungslösungen zur Strukturierung komplexer Informations- und Entscheidungsprozesse
+            \item Anpassung von webbasierten Lösungen zur Visualisierung von strukturierten Daten
+        \end{itemize}
+        \item \textbf{\href{https://match4it.com}{KI Spezialist}} – Match4IT (2025)
+        \begin{itemize}
+            \item Weiterbildung im Bereich KI-gestützter Prozessoptimierung 
+            \item Anwendung generativer KI zur Strukturierung komplexer Informations- und Entscheidungsprozesse
+        \end{itemize}
+        \item \textbf{KI - Chancen und Risiken für die Cybersicherheit} – Hubert Burda Media (2023)
+    \end{itemize}
+
+    \item[\faChartBar] \textbf{Datenanalyse} \label{analytics} 
+    \begin{itemize}
+
+        \item[\faChartPie] \textbf{\href{https://www.credly.com/badges/891bf1ee-0b27-4b8d-945a-1a1587e1d36b/public_url}{KNIME L1}} – KNIME (2023)
+
+        \item \textbf{SQL}
+        \begin{itemize}
+            \item \textbf{\href{https://www.codecademy.com/profiles/_cosinus/certificates/5cafb2d937090210d7df3652}{Analyze Data with SQL}} – Codecademy (2024)
+            \item \textbf{Grundlegendes zur Parallelität in MySQL} – Microsoft Learn (2024) 
+            \item \textbf{Grundlegendes zur Client-Server-Kommunikation in MySQL} – Microsoft Learn (2024)
+            \item \textbf{Konfigurieren von Speicher- und Dateidiensten} – Microsoft Learn (2024)
+            \item \textbf{SQL Server-Upgrades} – Microsoft Learn (2024)
+            \item \textbf{Programmieren mit Transact-SQL} – Microsoft Learn (2024)
+            \item \textbf{Erste Schritte mit Abfragen mit Transact-SQL} – Microsoft Learn (2024)
+            \item \textbf{Learn SQL Course} – Codecademy (2024)
+            \item \textbf{How to Transform Tables with SQL Course} – Codecademy (2019)
+            \item \textbf{How to Analyze Business Metrics with SQL Course} – Codecademy (2015)
+        \end{itemize}
+
+        \item[\faProjectDiagram] \textbf{Business Intelligence} 
+        \begin{itemize} 
+        \item \textbf{\href{https://www.codecademy.com/profiles/constantinsinowski/certificates/1cb76ac48943853ca32c394afeb491c9}{BI Dashboards with Power BI}} – Codecademy (2023)
+            \item \textbf{Aufbereiten von Daten für die Analyse mit Power BI} – Microsoft Learn (2023)
+            \item \textbf{Abrufen und Transformieren von Daten mit Power BI} – Microsoft Learn (2023) 
+            \item \textbf{Power BI – Vom Datenchaos zur effektiven Entscheidungsgrundlage} – Hubert Burda Media (2023)
+            \item \textbf{Power BI für Einsteiger:innen} – Hubert Burda Media (2023)
+            \item \textbf{Erste Schritte mit Power BI} – Microsoft Learn (2023)
+        \end{itemize}
+
+            \item \textbf{Einführung in SAP S/4 HANA} – Hochschule Fresenius (2023)
+            \item \textbf{Data Science - Definition, Grundlagen und Anwendungsbeispiele} – Hochschule Fresenius (2022)
+            \item \textbf{Microsoft Excel VBA: Grundlagen der Programmierung} – Hochschule Fresenius (2022)
+            \item \textbf{Excel Advanced} – Hochschule Fresenius (2022)
+            \item \textbf{Learn R Course} – Codecademy (2019)
+            \item \textbf{Learn Python 2 Course} – Codecademy (2019)
+
+    \end{itemize}
+
+    \newpage
+
+    \item[\faCogs] \textbf{Prozessautomatisierung} \label{process}
+    \begin{itemize}
+        \item \textbf{\href{https://www.codecademy.com/profiles/_cosinus/certificates/37c55263a9f1b1f7603f7551c293ecbd}{Bash Scripting}} – Codecademy (2024)
+        \item \textbf{Verwalten von Einstellungen für einen lokalen Windows-Computer mithilfe von PowerShell-Cmdlets} – Microsoft Learn (2024)
+        \item \textbf{Erstellen und Verwalten geplanter Aufträge mithilfe von Windows PowerShell} – Microsoft Learn (2024) 
+        \item \textbf{Erstellen und Verwalten von Hintergrundaufträgen mithilfe von Windows PowerShell} – Microsoft Learn (2024)   
+        \item \textbf{Work with different technologies in Power Automate for desktop} – Microsoft Learn (2023)
+        \item \textbf{Implement advanced logic in Power Automate for desktop} – Microsoft Learn (2023)
+        \item \textbf{Create and Manage Automated Processes by using Power Automate} – Microsoft Learn (2023)
+        \item \textbf{Automate processes with Robotic Process Automation and Power Automate for desktop} – Microsoft Learn (2023)
+        \item \textbf{Automate a business process with Power Automate} – Microsoft Learn (2023)
+        \item \textbf{Learn Bash Scripting Course} – Codecademy (2018)
+    \end{itemize}
+
+    \item[\faCode] \textbf{Programmiersprachen} \label{code}
+    \begin{itemize}
+        \item \textbf{Learn C\# Course} – Codecademy (2023)
+        \item \textbf{Learn Git \& GitHub Course} – Codecademy (2019)
+        \item \textbf{Learn the Command Line Course} – Codecademy (2018)
+        \item \textbf{Learn Java Course} – Codecademy (2016)
+        \item \textbf{Learn C++ Course} – Codecademy (2015)
+    \end{itemize}
+
+    \item[\faCompass] \textbf{\href{https://achievements.padi.com/faa80b73-a620-48a7-a8ed-d29169464eab}{PADI Divemaster}} – PADI (2024)
+\end{itemize}
+
+\newpage
+
+\section*{Sprachkenntnise} \label{sec:languages}
+
+\begin{itemize}
+    \item \textbf{{Deutsch}} – Muttersprache, C2
+    \item \textbf{{Englisch}} – Muttersprachniveau, verhandlungssicher, C2
+    \item \textbf{{Französisch}} – Fortgeschritten 
+\end{itemize}
+
+\vspace{5pt}
+
+\section*{Personalien} \label{sec:personal}
+
+\begin{itemize}
+    \item[\faWhatsapp] Nummer: \href{https://wa.me/4915679001672}{+49 1567 9001672}
+    \item[\faEnvelope] E-Mail: \textbf{\href{mailto:bewerbung@sinowski.de}{ bewerbung@sinowski.de}}
+    \item[\faGlobe] Webseite: \textbf{\href{https://sinowski.de}{sinowski.de}}
+    \item[\faLinkedin] LinkedIn: \textbf{\href{https://www.linkedin.com/in/constantinsinowski/}{linkedin.com/in/constantinsinowski}}
+    \item[\faMapMarker*] Anschrift: wohnhaft in \textbf{10827} Berlin, Deutschland 
+    \item[\faBaby] Familienstand: verlobt, \textbf{Vater} eines Kindes (2025)
+    \item[\faGraduationCap] \hyperref[sec:education]{\textbf{{Bachelor of Engineering}}} – Hochschule Fresenius onlineplus (2024)
+    \item[\faCar] \textbf{{Führerschein}} - Klasse BE, kein eigener PKW, \textbf{Reisebereitschaft} weltweit
+    \item[\faGraduationCap] \textbf{{Abitur}} - Allgemeine Hochschulreife (2012)
+    \item[\faBirthdayCake] Alter: 32 Jahre - Geburtsdatum (10.12.1993)
+\end{itemize}
+
+\newpage
+
+\section*{Veröffentlichungen} \label{sec:publications}
+
+\begin{itemize}
+    \item \textbf{\href{https://www.grin.com/document/1382179}{Verantwortungsvoller Umgang mit künstlicher Intelligenz}} – GRIN (2023)  
+    \item \textbf{\href{https://amzn.eu/d/00F2U5M}{Integration eines Qualitätsmanagements in der Softwareentwicklung}} – Amazon (2023)  
+    \item \textbf{\href{https://amzn.eu/d/7YCaeFZ}{Kanban-System zur Optimierung von Produktions- und Lieferketten}} – Amazon (2023)  
+    \item \textbf{\href{https://www.grin.com/document/1361892}{Digitale Zwillinge}} – GRIN (2023)  
+    \item \textbf{\href{https://www.grin.com/document/1361892}{Iterative Entwicklung mit Versionsprotokollierung}} – GRIN (2023)  
+    \item \textbf{\href{https://www.grin.com/document/1318357}{Informationssicherheit im Cloud-Computing}} – GRIN (2023)  
+    \item \textbf{\href{https://www.grin.com/document/1293242}{Risikomanagementprozesse}} – GRIN (2022)  
+    \item \textbf{\href{https://www.grin.com/document/1264668}{IT-Security und Datenschutz}} – GRIN (2022)  
+    \item \textbf{\href{https://www.grin.com/document/1264682}{Qualitätsmanagement in der fertigenden Industrie mithilfe von RFID}} – GRIN (2021)  
+    \item \textbf{\href{https://www.grin.com/document/1264678}{Siebensegment-Dekodierer und digitale Zahlen}} – GRIN (2021)  
+    \item \textbf{\href{https://www.grin.com/document/1264676}{Analyse großer industrieller Datensätze}} – GRIN (2021)  
+    \item \textbf{\href{https://www.grin.com/document/1336653}{Die Bestimmung der Elementarladung}} – GRIN (2021)  
+    \item \textbf{\href{https://www.grin.com/document/1336653}{Die Monopolstellung von FlixBus im Markt für Personenverkehr}} – GRIN (2020)  
+\end{itemize}
+
+\end{document}
+
