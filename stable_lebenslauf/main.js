@@ -588,6 +588,19 @@ function createExperienceElement(experience) {
     return div;
 }
 
+function renderDescriptions(descriptions) {
+  return descriptions.map(text => {
+    let icon = "fa-chevron-right"; // Icône par défaut
+    
+    if (text.includes("SQL")) icon = "fa-database";
+    if (text.includes("KI") || text.includes("Intelligence")) icon = "fa-brain";
+    if (text.includes("Automatisierung")) icon = "fa-robot";
+    if (text.includes("Code") || text.includes("Programmierung")) icon = "fa-code";
+
+    return `<li><span class="fa-li"><i class="fa-solid ${icon}"></i></span>${text}</li>`;
+  }).join('');
+}
+
 // Function to create certification elements
 function createCertificationElement(cert) {
   const div = document.createElement('div');
@@ -757,6 +770,7 @@ async function loadCertifications() {
       container.appendChild(section);
     }
   }
+  
 
   // If the HTML already contains minimal cert sections/items, keep them as baseline.
   const existingCertCount = container.querySelectorAll('.certification-item').length + container.querySelectorAll('.cert-section').length;
@@ -870,6 +884,23 @@ function initFloatingNav() {
     });
   });
 
+  function updateIconColors() {
+    const icons = document.querySelectorAll('i[class^="fa-"]');
+    
+    icons.forEach(icon => {
+        // Récupère la couleur de fond du parent direct
+        const bgColor = window.getComputedStyle(icon.parentElement).backgroundColor;
+        
+        // Calcule la luminosité (formule standard)
+        const rgb = bgColor.match(/\d+/g);
+        if (rgb) {
+            const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+            // Si le fond est sombre ( < 128), icône claire, sinon sombre
+            icon.style.color = brightness < 128 ? '#f8f9fa' : '#212529';
+        }
+    });
+  }
+
   // Update active section
   function updateActiveSection() {
     let currentSection = '';
@@ -921,4 +952,44 @@ document.addEventListener('DOMContentLoaded', async () => {
   loadEducation();
   initFloatingNav();
   lucide.createIcons();
+
+  // Appelle la fonction après le rendu de tes expériences
+  window.addEventListener('load', updateIconColors);
+
+  // Mapping intelligent des mots-clés vers les icônes FontAwesome
+    const iconMap = {
+        "SQL": "fa-database",
+        "Excel": "fa-file-excel",
+        "Automatisierung": "fa-robot",
+        "Bash": "fa-terminal",
+        "PowerShell": "fa-terminal",
+        "Analyse": "fa-magnifying-glass-chart",
+        "Reporting": "fa-chart-line",
+        "Digitalisierung": "fa-file-arrow-up",
+        "Konzeption": "fa-lightbulb"
+    };
+
+    function getBestIcon(text) {
+        // Cherche le premier mot-clé correspondant dans la phrase
+        const key = Object.keys(iconMap).find(k => text.includes(k));
+        return key ? iconMap[key] : "fa-chevron-right"; // Icône par défaut
+    }
+
+    container.innerHTML = data.map(exp => `
+        <div class="exp-card">
+            <div class="exp-header">
+                <strong>${exp.title}</strong> | 
+                <a href="${exp.companyLink}" target="_blank">${exp.company}</a>
+                <span class="exp-date">${exp.startDate} - ${exp.endDate}</span>
+            </div>
+            <ul class="fa-ul">
+                ${exp.description.map(line => `
+                    <li>
+                        <span class="fa-li"><i class="fa-solid ${getBestIcon(line)}"></i></span>
+                        ${line}
+                    </li>
+                `).join('')}
+            </ul>
+        </div>
+    `).join('');
 });
