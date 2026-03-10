@@ -47,5 +47,5 @@ git remote origin https://github.com/lemonproof/lebenslauf
 git switch stable_features
 git add .
 git commit -m "chore: update experience section and optimize iframe constraints"
-git push origin main
+git push origin stable
 ```
