@@ -38,6 +38,7 @@ FontAwesome: Consistent iconography across the entire profile.
 
 Google Fonts: Clean, modern typography (Inter/Roboto/Calibri stack).
 
+###
 📂 Project Structure
 Plaintext
 ├── index.html            # Main portfolio structure
@@ -61,10 +62,10 @@ The site is currently hosted and served as a static web application.
 
 Clone the repo:
 
-Bash
-git clone https://github.com/lemonproof/lebenslauf.git
-Run locally:
-Simply open index.html in any modern web browser.
+# Bash
+# git clone https://github.com/lemonproof/lebenslauf.git
+# Run locally:
+# Simply open index.html in any modern web browser.
 
 📬 Contact
 Email: application@sinowski.de
